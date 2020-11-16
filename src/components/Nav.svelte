@@ -4,8 +4,9 @@
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faBars } from '@fortawesome/free-solid-svg-icons';
   import ClickOutside from 'svelte-click-outside';
+  import Image from 'svelte-image';
 
-  export let segment: string;
+  export let segment;
 
   let open = false;
 
@@ -16,18 +17,18 @@
 
 <header class="fixed top-0 w-full bg-white header-box-shadow">
   <div
-    class="container flex flex-wrap items-baseline justify-between p-3 mx-auto bg-white"
+    class="container flex flex-wrap items-center justify-between p-3 mx-auto bg-white"
   >
-    <div class="flex">
+    <div class="lg:w-0 lg:flex-1">
       <a
         rel="prefetch"
         aria-current="{segment === undefined ? 'page' : undefined}"
         href="."
-        class="mt-0 text-xl font-semibold tracking-tight nav-link sm:inline-block"
       >
-        Markus Hatvan
+        <img class="h-8" src="mh-logo.svg" alt="Markus Hatvan" />
       </a>
     </div>
+
     <div class="ml-auto sm:hidden">
       <ClickOutside on:clickoutside="{() => (open = false)}">
         <button

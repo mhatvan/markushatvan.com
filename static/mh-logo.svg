@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="50px" viewBox="0 0 252 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 14</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-&amp;-Favicon" transform="translate(-106.000000, -146.000000)">
+            <g id="Group-14" transform="translate(106.000000, 146.000000)">
+                <g id="Group-13">
+                    <rect id="Rectangle" fill="#272C33" x="0" y="0" width="129" height="50"></rect>
+                    <rect id="Rectangle" fill="#E1D4C4" x="129" y="0" width="123" height="50"></rect>
+                </g>
+                <g id="Group-12" transform="translate(6.000000, 8.000000)" font-family="LEMONMILK-Medium, LEMON MILK" font-size="25" font-weight="400" letter-spacing="1.38888882">
+                    <text id="MARKUS" fill="#E1D4C4">
+                        <tspan x="0" y="27">MARKUS</tspan>
+                    </text>
+                    <text id="HATVAN" fill="#272C33">
+                        <tspan x="131" y="27">HATVAN</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
