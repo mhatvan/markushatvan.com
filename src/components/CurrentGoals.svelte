@@ -19,11 +19,11 @@
     },
     {
       text: 'Get better at algorithm challenges',
-      reached: false,
+      reached: true,
     },
     {
       text: 'Contribute to Svelte and Sapper',
-      reached: false,
+      reached: true,
     },
     {
       text: 'Start UI framework comparison website',

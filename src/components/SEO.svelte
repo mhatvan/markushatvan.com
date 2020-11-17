@@ -7,7 +7,7 @@
 
   const fullURL = `${baseURL}${$page.path}`;
 
-  const siteLogo = `${baseURL}/logo-192.png`;
+  const siteLogo = `${baseURL}/mh-favicon.svg`;
 
   const schemaOrgURL = 'http://schema.org';
 
