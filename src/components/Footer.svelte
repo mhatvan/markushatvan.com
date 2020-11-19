@@ -72,6 +72,14 @@
       </a>
       <a
         rel="prefetch"
+        aria-current="{segment === 'resume' ? 'page' : undefined}"
+        href="/resume"
+        class="footer-link"
+      >
+        Resume
+      </a>
+      <a
+        rel="prefetch"
         aria-current="{segment === 'imprint' ? 'page' : undefined}"
         href="/imprint"
         class="footer-link"
