@@ -79,9 +79,7 @@
     </li>
     <li>
       <b>Browser:</b>
-      <ExternalLink href="https://brave.com/rez638" isAffiliateLink>
-        Brave Browser
-      </ExternalLink>
+      <ExternalLink href="https://brave.com">Brave Browser</ExternalLink>
     </li>
     <li>
       <b>Email:</b>

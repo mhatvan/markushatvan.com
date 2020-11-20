@@ -100,6 +100,5 @@
 
   header {
     z-index: 1;
-    padding: 2px 0;
   }
 </style>

@@ -6,11 +6,10 @@ category: 'Lifestyle'
 excerpt: 'Regular scandals of data leaks by big corporate companies and concerns about misuse of personal information through illegal data collection practices leads to internet users switching away from mainstream products.'
 cover: reclaim-your-data-privacy-with-these-privacy-focused-alternatives.jpeg
 tags:
-- Data privacy
-- Open source
-- Tools
-- Awareness
-hasAffiliateLink: true
+  - Data privacy
+  - Open source
+  - Tools
+  - Awareness
 ---
 
 <script>
@@ -40,7 +39,7 @@ Supporting smaller and more underdog tools has another useful advantage: you can
 
 I'm sure that privacy hardliners will always find something to critique and will know how you can be even more secure on the web, but the choices below include stable, mature and free-to-use services that offer an acceptable trade-off between user experience, privacy and convenience.
 
-## Google Search alternatives  
+## Google Search alternatives
 
 This is probably the hardest switch you will have to make, at least it was for me. The search results and meta information (store opening times, movie ratings, weather forecasts and more) that you receive through Google Search is simply unbeatable.
 
@@ -52,17 +51,17 @@ So when using StartPage, you basically use the capability of great search result
 
 My recommendation: If you need to dig deep into a certain topic, use StartPage to get the best results or fallback to Google Search, otherwise you can get great results by using Qwant as your default search engine as well.
 
-## Google Chrome alternatives  
+## Google Chrome alternatives
 
 According to [statcounter](https://gs.statcounter.com/browser-market-share), Google Chrome is used by approximately 66% of the population worldwide as of October 2020! Although I don't disagree with the well-deserved popularity of the browser due to constant and innovative updates by Google, it's always scary when a corporate company has such a monopoly and lack of competition in a business sector as Google Chrome does.
 
-If you look for a privacy-focused browser alternative, I can recommend [Brave Web Browser](https://brave.com/rez638). Brave has a built-in ad blocker, automatic HTTPS upgrade, blocks autoplay and you can support content creators through its own built-in [BAT cryptocurrency](https://basicattentiontoken.org/). When I decided I would like to switch to Brave, there were some issues with syncing extensions and bookmarks across devices which kept me from using it for a while. Since then, they have fixed these issues and now it's a flawless and enjoyable experience.
+If you look for a privacy-focused browser alternative, I can recommend [Brave Web Browser](https://brave.com). Brave has a built-in ad blocker, automatic HTTPS upgrade, blocks autoplay and you can support content creators through its own built-in [BAT cryptocurrency](https://basicattentiontoken.org/). When I decided I would like to switch to Brave, there were some issues with syncing extensions and bookmarks across devices which kept me from using it for a while. Since then, they have fixed these issues and now it's a flawless and enjoyable experience.
 
 Another great alternative would be [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/), I personally don't use it because I prefer the look and feel of a Chromium-based browser.
 
 If you decide for a browser that comes without a built-in tracker and ad blocker, make sure to install a browser extension like [uBlock Origin](https://ublock.org) to be more safe while browsing the internet.
 
-## Google Maps alternatives  
+## Google Maps alternatives
 
 Your location data is very precious and you shouldn't have it exposed and possibly let it get into the wrong people's hands.
 
@@ -76,7 +75,7 @@ Other alternatives for desktop that I tried and could work for you include [Qwan
 
 On your phone, you could take a look at apps like [OsmAnd](https://osmand.net/) and [Transportr](https://transportr.app/).
 
-## Microsoft Office Suite alternatives  
+## Microsoft Office Suite alternatives
 
 Switching from Microsoft Office Suite to [LibreOffice](https://www.libreoffice.org/) is quite easy in my opinion. As long as you don't need any fancy advanced functionality, you should be fine.
 
