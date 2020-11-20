@@ -23,7 +23,7 @@ tags:
   </figcaption>
 </figure>
 
-<div class="mb-3 alert-grey"
+<div class="mb-3 alert-gray"
      role="alert">
   The code blocks are currently not highlighted with Svelte, so syntax highlighting and formatting might not be 100% correct.
 </div>

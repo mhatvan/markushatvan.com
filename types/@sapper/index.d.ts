@@ -2,3 +2,4 @@
 declare module 'svelte-image';
 declare module 'flatten';
 declare module 'svelte-click-outside';
+declare module 'svelte-forms-lib';

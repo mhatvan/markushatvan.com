@@ -274,7 +274,7 @@
     </ExternalLink>.
   </p>
 
-  <div class="mt-12 alert-grey" role="alert">
+  <div class="mt-12 alert-gray" role="alert">
     Didn't find anything interesting for your needs? Don't worry, I will keep
     updating the list from time to time.
   </div>
