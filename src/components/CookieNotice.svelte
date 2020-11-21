@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import GoogleAnalytics from './GoogleAnalytics.svelte';
   import ExternalLink from './ExternalLink.svelte';
+  import Splitbee from './Splitbee.svelte';
 
   const gaProperty = 'UA-81701707-3';
   const disableStr = `ga-disable-${gaProperty}`;
@@ -67,6 +68,7 @@
 
 {#if !didOptOut && consentGiven}
   <GoogleAnalytics />
+  <Splitbee />
 {/if}
 
 <style lang="postcss">

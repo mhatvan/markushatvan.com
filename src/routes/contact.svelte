@@ -72,6 +72,7 @@
     data-netlify="true"
   >
     <div class="flex flex-wrap p-3 bg-gray-200 border border-gray-500 rounded">
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="bot-field" class="hidden" />
       <div class="w-1/2 px-2 my-2">
         <label
@@ -80,6 +81,7 @@
         >Name</label>
         <input
           type="text"
+          name="name"
           id="name"
           class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
           on:blur="{handleChange}"
@@ -96,6 +98,7 @@
         >Email address</label>
         <input
           type="text"
+          name="email"
           id="email"
           class="w-full text-gray-700 border border-gray-400 rounded hover:border-gray-500"
           on:blur="{handleChange}"
