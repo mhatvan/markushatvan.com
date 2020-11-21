@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition';
   import { createForm } from 'svelte-forms-lib';
   import * as yup from 'yup';
   import Icon from 'svelte-awesome/components/Icon.svelte';
@@ -33,16 +34,22 @@
       comment: '',
     },
     validationSchema: yup.object().shape({
-      name: yup.string().required(),
-      email: yup.string().email().required(),
-      comment: yup.string().required(),
+      name: yup
+        .string()
+        .required('Name is a required field.')
+        .min(
+          2,
+          (value) => `Name must be at least ${value.min} characters long.`,
+        ),
+      email: yup
+        .string()
+        .email('Email must be a valid email.')
+        .required('Email is a required field.'),
+      comment: yup.string().required('Comment is a required field.'),
     }),
     onSubmit: () => {
       handleReset();
       didSubmit = true;
-      setTimeout(() => {
-        didSubmit = false;
-      }, 5000);
     },
   });
 </script>
@@ -88,14 +95,14 @@
           on:change="{handleChange}"
           bind:value="{$form.name}"
         />
-        {#if $errors.name}<small>{$errors.name}</small>{/if}
+        {#if $errors.name}<small transition:fade>{$errors.name}</small>{/if}
       </div>
 
       <div class="w-1/2 px-2 my-2">
         <label
           for="email"
           class="mb-2 text-sm font-bold tracking-wide text-gray-700"
-        >Email address</label>
+        >Email</label>
         <input
           type="text"
           name="email"
@@ -105,7 +112,7 @@
           on:change="{handleChange}"
           bind:value="{$form.email}"
         />
-        {#if $errors.email}<small>{$errors.email}</small>{/if}
+        {#if $errors.email}<small transition:fade>{$errors.email}</small>{/if}
       </div>
 
       <div class="w-full px-2 my-2">
@@ -122,7 +129,9 @@
           on:change="{handleChange}"
           bind:value="{$form.comment}"
         ></textarea>
-        {#if $errors.comment}<small>{$errors.comment}</small>{/if}
+        {#if $errors.comment}
+          <small transition:fade>{$errors.comment}</small>
+        {/if}
       </div>
 
       <div class="w-full px-2 my-2">
