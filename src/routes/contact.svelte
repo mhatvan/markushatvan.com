@@ -33,25 +33,50 @@
       email: '',
       comment: '',
     },
-    validationSchema: yup.object().shape({
-      name: yup
-        .string()
-        .required('Name is a required field.')
-        .min(
-          2,
-          (value) => `Name must be at least ${value.min} characters long.`,
-        ),
-      email: yup
-        .string()
-        .email('Email must be a valid email.')
-        .required('Email is a required field.'),
-      comment: yup.string().required('Comment is a required field.'),
-    }),
+    // validationSchema: yup.object().shape({
+    //   name: yup
+    //     .string()
+    //     .required('Name is a required field.')
+    //     .min(
+    //       2,
+    //       (value) => `Name must be at least ${value.min} characters long.`,
+    //     ),
+    //   email: yup
+    //     .string()
+    //     .email('Email must be a valid email.')
+    //     .required('Email is a required field.'),
+    //   comment: yup.string().required('Comment is a required field.'),
+    // }),
     onSubmit: () => {
       handleReset();
       didSubmit = true;
     },
   });
+
+  // function encode(data) {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+  //     )
+  //     .join('&');
+  // }
+
+  // const handleSubmitNew = (event) => {
+  //   event.preventDefault();
+  //   console.log(2423, event);
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': event.target.getAttribute('name'),
+  //     }),
+  //   })
+  //     .then(() => {
+  //       handleReset();
+  //       didSubmit = true;
+  //     })
+  //     .catch((error) => alert(error));
+  // };
 </script>
 
 <svelte:head>
@@ -71,12 +96,12 @@
   <p>Want to get in touch? There is always something to discuss.</p>
 
   <form
-    on:submit="{handleSubmit}"
     method="post"
     name="contact"
     class="mt-3 mb-8"
     netlify-honeypot="bot-field"
     data-netlify="true"
+    action="/"
   >
     <div class="flex flex-wrap p-3 bg-gray-200 border border-gray-500 rounded">
       <input type="hidden" name="form-name" value="contact" />
