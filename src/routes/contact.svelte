@@ -19,64 +19,27 @@
 
   let didSubmit = false;
 
-  const {
-    form,
-    errors,
-    isValid,
-    isSubmitting,
-    handleChange,
-    handleReset,
-    handleSubmit,
-  } = createForm({
+  const { form, errors, isValid, isSubmitting, handleChange } = createForm({
     initialValues: {
       name: '',
       email: '',
       comment: '',
     },
-    // validationSchema: yup.object().shape({
-    //   name: yup
-    //     .string()
-    //     .required('Name is a required field.')
-    //     .min(
-    //       2,
-    //       (value) => `Name must be at least ${value.min} characters long.`,
-    //     ),
-    //   email: yup
-    //     .string()
-    //     .email('Email must be a valid email.')
-    //     .required('Email is a required field.'),
-    //   comment: yup.string().required('Comment is a required field.'),
-    // }),
-    onSubmit: () => {
-      handleReset();
-      didSubmit = true;
-    },
+    validationSchema: yup.object().shape({
+      name: yup
+        .string()
+        .required('Name is a required field.')
+        .min(
+          2,
+          (value) => `Name must be at least ${value.min} characters long.`,
+        ),
+      email: yup
+        .string()
+        .email('Email must be a valid email.')
+        .required('Email is a required field.'),
+      comment: yup.string().required('Comment is a required field.'),
+    }),
   });
-
-  // function encode(data) {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
-  //     )
-  //     .join('&');
-  // }
-
-  // const handleSubmitNew = (event) => {
-  //   event.preventDefault();
-  //   console.log(2423, event);
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({
-  //       'form-name': event.target.getAttribute('name'),
-  //     }),
-  //   })
-  //     .then(() => {
-  //       handleReset();
-  //       didSubmit = true;
-  //     })
-  //     .catch((error) => alert(error));
-  // };
 </script>
 
 <svelte:head>
