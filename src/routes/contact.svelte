@@ -101,7 +101,7 @@
     class="mt-3 mb-8"
     netlify-honeypot="bot-field"
     data-netlify="true"
-    action="/"
+    action="/contact"
   >
     <div class="flex flex-wrap p-3 bg-gray-200 border border-gray-500 rounded">
       <input type="hidden" name="form-name" value="contact" />
