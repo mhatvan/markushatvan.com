@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import GoogleAnalytics from './GoogleAnalytics.svelte';
   import ExternalLink from './ExternalLink.svelte';
   import Splitbee from './Splitbee.svelte';
 
@@ -67,11 +66,10 @@
 {/if}
 
 {#if !didOptOut && consentGiven}
-  <GoogleAnalytics />
   <Splitbee />
 {/if}
 
-<style lang="postcss">
+<style>
   .cookie-notice-btn {
     @apply px-5 py-2 mr-3 font-semibold text-white bg-teal-700 rounded text-sm;
   }

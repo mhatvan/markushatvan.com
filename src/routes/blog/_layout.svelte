@@ -65,7 +65,7 @@
 
       const cleanedSlug = slug.replace(/\d-/, '').replace(/[.?!:',/]/g, '');
 
-      heading.innerHTML = `${headingVal} <a href="/blog/${post.slug}#${cleanedSlug}" class="anchor-link" title="Copy anchor link">#</a>`;
+      heading.innerHTML = `<a href="/blog/${post.slug}#${cleanedSlug}" class="anchor-link" title="Copy anchor link">#</a> ${headingVal}`;
       heading.id = slug;
     });
 
@@ -103,7 +103,7 @@
   <BlogPostHeader post="{post}" />
 
   <section class="container flex flex-wrap mh-container">
-    <article class="w-full pb-12 blog lg:w-9/12 lg:pr-16">
+    <article class="w-full pb-12 prose blog lg:w-9/12 lg:pr-16 lg:prose-xl">
       <slot />
 
       <div class="p-5 my-8 text-center border-4 border-teal-700">

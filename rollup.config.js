@@ -13,8 +13,6 @@ import sveltePreprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import pkg from './package.json';
 const postcss = require('./postcss.config');
-// import remarkSlug from 'remark-slug';
-// import remarkAutolinkHeadings from 'remark-autolink-headings';
 // import analyze from 'rollup-plugin-analyzer';
 // import visualizer from 'rollup-plugin-visualizer';
 
@@ -38,11 +36,16 @@ const preprocess = [
 ];
 
 // Changes in these files will trigger a rebuild of the global CSS
-const globalCSSWatchFiles = ['postcss.config.js', 'tailwind.config.js', 'src/global.pcss'];
+const globalCSSWatchFiles = [
+  'postcss.config.js',
+  'tailwind.config.js',
+  'src/global.pcss',
+];
 
 const onwarn = (warning, onwarn) =>
   (warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
-  (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
+  (warning.code === 'CIRCULAR_DEPENDENCY' &&
+    /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning);
 
 export default {
@@ -55,9 +58,10 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
-        dev,
-        hydratable: true,
-        emitCss: true,
+        compilerOptions: {
+          dev,
+          hydratable: true,
+        },
         extensions: ['.svelte', '.svx'],
         preprocess,
       }),
@@ -169,9 +173,12 @@ export default {
         'module.require': 'require',
       }),
       svelte({
-        generate: 'ssr',
-        hydratable: true,
-        dev,
+        compilerOptions: {
+          dev,
+          generate: 'ssr',
+          hydratable: true,
+        },
+        emitCss: false,
         extensions: ['.svelte', '.svx'],
         preprocess,
       }),
@@ -189,7 +196,8 @@ export default {
       // visualizer(),
     ],
     external: Object.keys(pkg.dependencies).concat(
-      require('module').builtinModules || Object.keys(process.binding('natives')),
+      require('module').builtinModules ||
+        Object.keys(process.binding('natives')),
     ),
 
     preserveEntrySignatures: 'strict',
