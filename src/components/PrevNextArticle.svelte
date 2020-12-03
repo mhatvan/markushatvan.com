@@ -16,7 +16,8 @@
           <a
             rel="prefetch"
             href="blog/{previousArticle.slug}"
-            class="text-xl link-inherit"
+            class="text-xl no-underline hover:underline link-inherit"
+            style="font-weight: 700;"
           >
             {previousArticle.title}
           </a>
@@ -34,7 +35,8 @@
           <a
             rel="prefetch"
             href="blog/{nextArticle.slug}"
-            class="text-xl link-inherit"
+            class="text-xl no-underline hover:underline link-inherit"
+            style="font-weight: 700;"
           >
             {nextArticle.title}
           </a>

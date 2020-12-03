@@ -112,7 +112,7 @@ body {
 }
 
 .mh figcaption {
-  @apply text-gray-600 text-sm italic;
+  @apply text-gray-600 text-sm;
 }
 
 .mh p > code:not([class*='language-']),
@@ -225,4 +225,15 @@ body {
       rgba(145, 145, 145, 0.05) 99.999%
     ),
     linear-gradient(90deg, rgb(9, 201, 186), rgb(18, 131, 221));
+}
+
+/* @tailwindcss/typography overwrites */
+.prose-lg img,
+.lg\:prose-xl img {
+  margin: 0 !important;
+}
+
+.prose-lg ul > li,
+.lg\:prose-xl ul > li {
+  padding-left: 0 !important;
 }
