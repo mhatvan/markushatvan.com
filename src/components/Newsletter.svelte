@@ -1,16 +1,11 @@
-<style>
-  .mailchimp-style {
-    position: absolute;
-    left: -5000px;
-  }
-</style>
-
 <script>
   import ExternalLink from './ExternalLink.svelte';
 </script>
 
 <!-- Mailchimp Signup Form -->
-<section class="container mb-16 text-center bg-gray-200 border-t-4 border-teal-700 mh-container">
+<section
+  class="container mb-16 text-center bg-gray-200 border-t-4 border-teal-700 mh-container"
+>
   <div id="mc_embed_signup">
     <form
       action="https://markushatvan.us10.list-manage.com/subscribe/post?u=5cb357866d79280c8f4a5642a&amp;id=498b94dcd1"
@@ -44,8 +39,8 @@
           />
         </div>
         <p class="text-xs text-gray-700">
-          By clicking below to subscribe, you acknowledge that your information will be transferred
-          to Mailchimp for processing.
+          By clicking below to subscribe, you acknowledge that your information
+          will be transferred to Mailchimp for processing.
           <ExternalLink href="https://mailchimp.com/legal/">
             Learn more about Mailchimp's privacy practices here.
           </ExternalLink>
@@ -56,10 +51,17 @@
             value="Subscribe"
             name="subscribe"
             id="mc-embedded-subscribe"
-            class="w-full px-5 py-3 font-semibold text-white bg-teal-700 rounded cursor-pointer hover:bg-teal-800"
+            class="w-full px-5 py-3 font-semibold text-white bg-primaryTeal rounded cursor-pointer hover:bg-secondaryTeal"
           />
         </div>
       </div>
     </form>
   </div>
 </section>
+
+<style>
+  .mailchimp-style {
+    position: absolute;
+    left: -5000px;
+  }
+</style>

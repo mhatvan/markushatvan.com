@@ -96,7 +96,7 @@
   }
 
   [aria-current] {
-    font-weight: bold;
+    @apply font-normal;
   }
 
   header {

@@ -3,56 +3,75 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Caveat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lato Regular'), local('Lato-Regular'),
-    url('./lato-v17-latin-regular.woff2') format('woff2'),
-    url('./lato-v17-latin-regular.woff') format('woff');
+  src: local('Caveat'), local('Caveat'),
+    url('./caveat-regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Rubik';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-display: swap;
-  src: local('Lato Bold'), local('Lato-Bold'),
-    url('./lato-v17-latin-700.woff2') format('woff2'),
-    url('./lato-v17-latin-700.woff') format('woff');
+  src: local('Rubik Medium'), local('Rubik-Medium'),
+    url('./rubik-medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rubik Regular'), local('Rubik-Regular'),
+    url('./rubik-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Rubik Light'), local('Rubik-Light'),
+    url('./rubik-light.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Rubik', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 61px;
-  @apply relative leading-relaxed text-lg;
+  @apply relative leading-relaxed text-lg font-light;
 }
 
 .mh a {
-  @apply text-teal-700;
+  @apply text-secondaryTeal;
 }
 
 .mh a:hover {
-  @apply underline text-teal-800;
+  @apply no-underline text-cyan;
 }
 
 .mh h1 {
-  @apply text-3xl mb-3 mt-6 font-bold;
+  @apply text-3xl mb-3 mt-6 font-normal text-darkGrey;
+  font-family: 'Rubik', sans-serif;
 }
 
 .mh h2 {
-  @apply text-2xl mb-3 mt-6 font-bold;
+  @apply text-2xl mb-3 mt-6 font-medium text-cyan;
 }
 
 .mh h3,
 .mh h4,
 .mh h5,
 .mh h6 {
-  @apply text-xl mb-3 mt-6 font-semibold;
+  @apply text-xl mb-3 mt-6 font-medium text-cyan;
 }
 
 .mh p {
-  @apply mb-4 text-gray-800;
+  @apply mb-4 text-darkGrey;
 }
 
 .mh .blog code p {
@@ -137,24 +156,24 @@ body {
 }
 
 .nav-link {
-  @apply block text-teal-700 mt-4 mr-4;
+  @apply block text-cyan mt-4 mr-4;
 }
 
 .nav-link:hover {
-  @apply text-teal-800;
+  @apply text-secondaryTeal;
 }
 
 .footer-link {
-  @apply block text-teal-200 mt-4 mr-4;
+  @apply block text-primaryTeal mt-4 mr-4;
 }
 
 .footer-link:hover {
-  @apply text-white;
+  @apply text-secondaryTeal;
 }
 
 .mh .link-inherit,
 .mh .link-inherit:hover {
-  color: inherit !important;
+  @apply text-darkGrey font-normal;
 }
 
 .mh .mh-container {
@@ -162,11 +181,11 @@ body {
 }
 
 .mh .btn-primary {
-  @apply px-5 py-3 text-sm font-semibold text-white bg-teal-700;
+  @apply px-5 py-3 text-sm font-semibold text-white bg-primaryTeal;
 }
 
 .mh .btn-primary:hover {
-  @apply bg-teal-800 text-white no-underline;
+  @apply bg-secondaryTeal text-white no-underline;
 }
 
 .mh .card {
@@ -178,7 +197,7 @@ body {
 }
 
 .mh .info-tag {
-  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm font-semibold mr-2 px-3;
+  @apply inline-flex items-center bg-gray-200 rounded py-1 my-1 text-sm mr-2 px-3 font-normal;
 }
 
 .mh .alert-grey {
@@ -186,41 +205,14 @@ body {
 }
 
 .applause-gradient {
-  background-image: linear-gradient(
-      306deg,
-      rgba(54, 54, 54, 0.05) 0%,
-      rgba(54, 54, 54, 0.05) 33.333%,
-      rgba(85, 85, 85, 0.05) 33.333%,
-      rgba(85, 85, 85, 0.05) 66.666%,
-      rgba(255, 255, 255, 0.05) 66.666%,
-      rgba(255, 255, 255, 0.05) 99.999%
-    ),
-    linear-gradient(
-      353deg,
-      rgba(81, 81, 81, 0.05) 0%,
-      rgba(81, 81, 81, 0.05) 33.333%,
-      rgba(238, 238, 238, 0.05) 33.333%,
-      rgba(238, 238, 238, 0.05) 66.666%,
-      rgba(32, 32, 32, 0.05) 66.666%,
-      rgba(32, 32, 32, 0.05) 99.999%
-    ),
-    linear-gradient(
-      140deg,
-      rgba(192, 192, 192, 0.05) 0%,
-      rgba(192, 192, 192, 0.05) 33.333%,
-      rgba(109, 109, 109, 0.05) 33.333%,
-      rgba(109, 109, 109, 0.05) 66.666%,
-      rgba(30, 30, 30, 0.05) 66.666%,
-      rgba(30, 30, 30, 0.05) 99.999%
-    ),
-    linear-gradient(
-      189deg,
-      rgba(77, 77, 77, 0.05) 0%,
-      rgba(77, 77, 77, 0.05) 33.333%,
-      rgba(55, 55, 55, 0.05) 33.333%,
-      rgba(55, 55, 55, 0.05) 66.666%,
-      rgba(145, 145, 145, 0.05) 66.666%,
-      rgba(145, 145, 145, 0.05) 99.999%
-    ),
-    linear-gradient(90deg, rgb(9, 201, 186), rgb(18, 131, 221));
+  /* background: rgb(207, 212, 204);
+  background: radial-gradient(
+    circle,
+    rgba(207, 212, 204, 1) 0%,
+    rgba(80, 207, 179, 1) 100%
+  ); */
+  background: url('test.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

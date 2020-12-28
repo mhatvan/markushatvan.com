@@ -14,14 +14,16 @@
   export let segment: string;
 </script>
 
-<footer class="text-teal-200 border-t-4 border-teal-700 applause-gradient">
+<footer class="text-teal-200 border-t-4 border-primaryTeal bg-darkGrey">
   <div
     class="container flex flex-wrap items-baseline justify-between px-3 py-5 mx-auto"
   >
-    <div class="w-full mb-6 sm:mb-0 sm:w-1/3">Markus Hatvan</div>
+    <div class="w-full mb-6 sm:mb-0 sm:w-1/3 text-primaryTeal">
+      Markus Hatvan
+    </div>
     <nav
       aria-label="Left footer navigation"
-      class="w-full mb-6 sm:mb-0 sm:w-1/3"
+      class="w-full mb-6 sm:mb-0 sm:w-1/3 "
     >
       <a
         rel="prefetch"
@@ -92,7 +94,7 @@
       <ExternalLink
         href="mailto:contact@markushatvan.com"
         ariaLabel="Write me a mail"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faEnvelope}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
@@ -100,7 +102,7 @@
       <ExternalLink
         href="https://github.com/mhatvan"
         ariaLabel="Follow me on GitHub"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
         rel="me"
       >
         <Icon data="{faGithub}" class="mr-3" scale="{1.5}" />
@@ -109,7 +111,7 @@
       <ExternalLink
         href="https://dev.to/mhatvan"
         ariaLabel="Follow me on dev.to"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faDev}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
@@ -117,7 +119,7 @@
       <ExternalLink
         href="https://www.linkedin.com/in/markus-hatvan-b912b91aa/"
         ariaLabel="Network with me on Linkedin"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faLinkedin}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
@@ -125,7 +127,7 @@
       <ExternalLink
         href="https://twitter.com/HatvanMarkus"
         ariaLabel="Tweet with me on Twitter"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
         rel="me"
       >
         <Icon data="{faTwitter}" class="mr-3" scale="{1.5}" />
@@ -134,7 +136,7 @@
       <ExternalLink
         href="https://medium.com/@markushatvan"
         ariaLabel="Follow me on Medium"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faMedium}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
@@ -142,7 +144,7 @@
       <ExternalLink
         href="https://www.reddit.com/user/chimpcmder"
         ariaLabel="Follow me Reddit"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faReddit}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
@@ -150,14 +152,14 @@
       <ExternalLink
         href="https://markushatvan.com/rss.xml"
         ariaLabel="Read the RSS feed"
-        customClass="inline-flex mt-4 lg:mt-0 hover:text-white"
+        customClass="inline-flex mt-4 lg:mt-0 hover:text-white text-primaryTeal"
       >
         <Icon data="{faRss}" class="mr-3" scale="{1.5}" />
       </ExternalLink>
     </nav>
 
     <div class="w-full mt-0 sm:w-1/3 sm:mt-6">
-      <small class="text-sm">
+      <small class="text-sm text-primaryTeal">
         <span class="hidden md:inline">Copyright</span>
         © 2020 Markus Hatvan
       </small>

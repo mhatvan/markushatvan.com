@@ -16,7 +16,15 @@ module.exports = {
       circle: 'circle',
       roman: 'upper-roman',
     },
-    extend: {},
+    extend: {
+      colors: {
+        cyan: '#578786',
+        secondaryTeal: '#31C9A7',
+        primaryTeal: '#22AD9D',
+        lightGrey: '#CFD4CC',
+        darkGrey: '#40444D',
+      },
+    },
   },
   variants: {},
   plugins: [],

@@ -56,7 +56,7 @@
 </script>
 
 <section class="container mh-container">
-  <h2 class="border-b-4 border-teal-700">Talks</h2>
+  <h2 class="border-b-4 border-primaryTeal">Talks</h2>
 
   <small class="block mt-6 text-sm text-gray-800"> <em>Upcoming</em> </small>
 

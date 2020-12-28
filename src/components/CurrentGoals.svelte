@@ -59,8 +59,7 @@
 </script>
 
 <div class="w-full md:w-2/4">
-  <h1>{readableSlug}</h1>
-  <h2>Current goals</h2>
+  <h1 class="pb-3">Current goals - {readableSlug}</h1>
 
   {#each goals as goal}
     <div class="flex items-baseline italic">

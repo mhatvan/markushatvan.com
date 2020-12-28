@@ -6,9 +6,9 @@
   export let post: Post;
 </script>
 
-<span class="text-teal-700">{formatDate(post.creationDate)}</span>
+<span class="text-secondaryTeal">{formatDate(post.creationDate)}</span>
 &middot;
-<span class="text-teal-700">{post.readingTime}</span>
+<span class="text-secondaryTeal">{post.readingTime}</span>
 &middot;
 <a
   rel="prefetch"

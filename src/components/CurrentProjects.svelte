@@ -39,7 +39,7 @@
 </script>
 
 <section class="container mh-container">
-  <h2 class="border-b-4 border-teal-700">Current Projects</h2>
+  <h2 class="border-b-4 border-primaryTeal">Current Projects</h2>
   {#each projects as project}
     <div
       class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300"

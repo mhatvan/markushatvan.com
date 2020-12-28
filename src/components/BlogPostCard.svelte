@@ -7,8 +7,12 @@
 <div class="card">
   <!-- <a href="blog/{post.slug}"> <img src="{post.cover}" alt="asdf" /> </a> -->
   <div class="px-6 py-8">
-    <div class="my-3 text-xl font-bold">
-      <a rel="prefetch" href="blog/{post.slug}" class="link-inherit">{post.title}</a>
+    <div class="my-3 text-xl">
+      <a
+        rel="prefetch"
+        href="blog/{post.slug}"
+        class="link-inherit"
+      >{post.title}</a>
     </div>
 
     <div class="my-3">

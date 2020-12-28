@@ -40,7 +40,7 @@
 </script>
 
 <section class="container mh-container">
-  <h2 class="border-b-4 border-teal-700">Open Source Contributions</h2>
+  <h2 class="border-b-4 border-primaryTeal">Open Source Contributions</h2>
   {#each repos as repo}
     <div
       class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300"
