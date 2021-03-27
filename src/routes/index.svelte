@@ -1,9 +1,14 @@
 <script context="module">
-  // export async function load({ fetch }) {
-  // const blog = await fetch(`blog.json`);
-  // const posts = await blog.json();
-  // return { props: { posts } };
-  // }
+  export async function load({ fetch }: LoadInput) {
+    const blog = await fetch(`/blog.json`);
+    const posts = await blog.json();
+
+    return {
+      props: {
+        posts,
+      },
+    };
+  }
 </script>
 
 <script>
@@ -17,6 +22,7 @@
   import SEO from '$lib/SEO.svelte';
   import type { Post } from '../models/post';
   import ServicesCallToAction from '$lib/ServicesCallToAction.svelte';
+  import type { LoadInput } from '@sveltejs/kit/types.internal';
 
   export let posts: Post[];
 </script>
@@ -33,7 +39,7 @@
 
 <Introduction />
 
-<!-- <RecentPosts posts="{posts}" /> -->
+<RecentPosts posts="{posts}" />
 
 <ServicesCallToAction />
 

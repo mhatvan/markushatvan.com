@@ -1,7 +1,8 @@
 <script>
   import InfoTags from './InfoTags.svelte';
+  import type { Post } from 'src/models/post';
 
-  export let post;
+  export let post: Post;
 </script>
 
 <div class="card">

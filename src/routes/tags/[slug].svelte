@@ -1,9 +1,9 @@
 <script context="module">
   import { convertToSentenceCase } from '../../utils';
 
-  export async function load({ page, fetch }) {
+  export async function load({ page, fetch }: LoadInput) {
     try {
-      const allPosts = await fetch(`blog.json`);
+      const allPosts = await fetch(`/blog.json`);
       const posts: Post[] = await allPosts.json();
 
       const postsByTag = posts.filter((post: Post) => {
@@ -27,6 +27,7 @@
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import SEO from '$lib/SEO.svelte';
   import type { Post } from '../../models/post';
+  import type { LoadInput } from '@sveltejs/kit/types.internal';
 
   export let postsByTag: Post[];
   export let slug: string;

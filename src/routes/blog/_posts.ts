@@ -3,8 +3,8 @@ import frontMatter from 'front-matter';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prism-svelte';
-import loadLanguages from 'prismjs/components/index';
-import readingTime from 'read-time-estimate';
+import loadLanguages from 'prismjs/components/index.js';
+// import readingTime from 'read-time-estimate';
 
 loadLanguages(['shell', 'markdown', 'json']);
 
@@ -20,21 +20,21 @@ const posts = fs
 
     const renderer = new marked.Renderer();
 
-    renderer.code = (source, lang) => {
+    renderer.code = (source, lang: string) => {
       const html = Prism.highlight(source, Prism.languages[lang], lang);
       return `<pre class='language-${lang}'><code class='language-${lang}'>${html}</code></pre>`;
     };
 
     const html = marked(postFrontMatter.body, { renderer });
 
-    const readingTimeDuration = readingTime(postFrontMatter.body)
-      .humanizedDuration;
-    const beautifiedReadingTime = readingTimeDuration.replace('utes', ' read');
+    // const readingTimeDuration = readingTime.readTime(postFrontMatter.body)
+    //   .humanizedDuration;
+    // const beautifiedReadingTime = readingTimeDuration.replace('utes', ' read');
 
     return {
       ...postFrontMatter.attributes,
       html: marked(html),
-      readingTime: beautifiedReadingTime,
+      // readingTime: beautifiedReadingTime,
     };
   });
 

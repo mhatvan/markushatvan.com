@@ -1,9 +1,9 @@
 <script context="module">
   import { convertToSentenceCase } from '../../utils';
 
-  export async function load({ page, fetch }) {
+  export async function load({ page, fetch }: LoadInput) {
     try {
-      const allPosts = await fetch(`blog.json`);
+      const allPosts = await fetch(`/blog.json`);
       const posts = await allPosts.json();
 
       const postsByCategory = posts.filter(
@@ -11,8 +11,7 @@
           post.category === convertToSentenceCase(page.params.slug),
       );
 
-
-          return { props: { posts, postsByCategory, slug: page.params.slug } };
+      return { props: { posts, postsByCategory, slug: page.params.slug } };
     } catch (error) {
       console.error(error);
     }
@@ -27,6 +26,7 @@
   import SEO from '$lib/SEO.svelte';
   import { page } from '$app/stores';
   import type { Post } from '../../models/post';
+  import type { LoadInput } from '@sveltejs/kit/types.internal';
 
   export let postsByCategory: Post[];
   export let posts: Post[];

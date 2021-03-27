@@ -1,7 +1,7 @@
 <script context="module">
-  export async function load({ fetch }) {
+  export async function load({ fetch }: LoadInput) {
     try {
-      const blog = await fetch(`blog.json`);
+      const blog = await fetch(`/blog.json`);
       const posts = await blog.json();
 
       // const webmentions = await fetch(
@@ -9,15 +9,15 @@
       // );
       // const webmentionCounts = await webmentions.json();
 
-      return { posts };
+      return { props: { posts } };
     } catch (error) {
       console.error(error);
     }
   }
 </script>
 
-<script lang="ts">
-  import Image from 'svelte-image';
+<script>
+  // import Image from 'svelte-image';
   import BlogPostHeader from '$lib/BlogPostHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import ShareButtons from '$lib/ShareButtons.svelte';
@@ -28,14 +28,15 @@
   import SEO from '$lib/SEO.svelte';
   import { afterUpdate } from 'svelte';
   import { convertToSlug } from '../../utils';
+  import type { Post } from '../../models/post';
+  import type { LoadInput } from '@sveltejs/kit/types.internal';
 
   // import Webmentions from '$lib/Webmentions.svelte';
-  // import type { Post } from '../../models/post';
 
   // adding types throws compiler error for some reason
   // need https://github.com/sveltejs/svelte/pull/4282 to get merged
-  export let posts;
-  export let segment;
+  export let posts: Post[];
+  export let segment: string;
 
   $: segment = segment;
   $: post = posts.find((post) => post.slug === segment);
@@ -64,7 +65,9 @@
 
       const cleanedSlug = slug.replace(/\d-/, '').replace(/[.?!:',/#]/g, '');
 
-      heading.innerHTML = `${headingVal} <a href="/blog/${post.slug}#${cleanedSlug}" class="anchor-link" title="Copy anchor link">#</a>`;
+      heading.innerHTML = `${headingVal} <a href="/blog/${
+        post!.slug
+      }#${cleanedSlug}" class="anchor-link" title="Copy anchor link">#</a>`;
       heading.id = cleanedSlug;
     });
 
@@ -155,7 +158,7 @@
       </p>
     </div>
     <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
-      <Image src="blog-post.png" alt="Blog post card" />
+      <!-- <Image src="blog-post.png" alt="Blog post card" /> -->
     </div>
   </BlogOverviewHeader>
 

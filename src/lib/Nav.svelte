@@ -1,6 +1,6 @@
 <script>
-  import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faBars } from '@fortawesome/free-solid-svg-icons';
+  // import Icon from 'svelte-awesome/components/Icon.svelte';
+  // import { faBars } from '@fortawesome/free-solid-svg-icons';
   // import ClickOutside from 'svelte-click-outside';
 
   export let segment: string;
