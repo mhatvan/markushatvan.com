@@ -3,7 +3,7 @@ import frontMatter from 'front-matter';
 import marked from 'marked';
 import Prism from 'prismjs';
 import 'prism-svelte';
-const loadLanguages = require('prismjs/components/');
+import loadLanguages from 'prismjs/components/index';
 import readingTime from 'read-time-estimate';
 
 loadLanguages(['shell', 'markdown', 'json']);
@@ -27,8 +27,9 @@ const posts = fs
 
     const html = marked(postFrontMatter.body, { renderer });
 
-    const readingTimeDuration = readingTime(postFrontMatter.body).humanizedDuration;
-    const beautifiedReadingTime = readingTimeDuration.replace("utes", " read");
+    const readingTimeDuration = readingTime(postFrontMatter.body)
+      .humanizedDuration;
+    const beautifiedReadingTime = readingTimeDuration.replace('utes', ' read');
 
     return {
       ...postFrontMatter.attributes,

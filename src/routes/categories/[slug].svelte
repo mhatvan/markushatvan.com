@@ -11,7 +11,8 @@
           post.category === convertToSentenceCase(page.params.slug),
       );
 
-      return { posts, postsByCategory, slug: page.params.slug };
+
+          return { props: { posts, postsByCategory, slug: page.params.slug } };
     } catch (error) {
       console.error(error);
     }

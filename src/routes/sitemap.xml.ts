@@ -69,11 +69,10 @@ const render = (
 </urlset>
 `;
 
-/* eslint-disable-next-line */
-export function get(req: any, res: any, next: any): void {
-  res.setHeader('Cache-Control', `max-age=0, s-max-age=${600}`); // 10 minutes
-  res.setHeader('Content-Type', 'application/rss+xml');
-
-  const sitemap = render(pages, posts);
-  res.end(sitemap);
+export function get(props): void {
+  // console.log(2, props.context, props.query, props.params);
+  // res.setHeader('Cache-Control', `max-age=0, s-max-age=${600}`); // 10 minutes
+  // res.setHeader('Content-Type', 'application/rss+xml');
+  // const sitemap = render(pages, posts);
+  // res.end(sitemap);
 }

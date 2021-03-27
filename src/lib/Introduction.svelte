@@ -1,5 +1,5 @@
 <script>
-  import Image from 'svelte-image';
+  // import Image from 'svelte-image';
 </script>
 
 <section class="applause-gradient">
@@ -23,16 +23,17 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            latest activity on GitHub</a>!
+            latest activity on GitHub</a
+          >!
         </p>
       </div>
       <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
-        <Image
+        <!-- <Image
           src="markus-hatvan.jpeg"
           alt="Markus Hatvan"
           placeholderClass="rounded-full"
           class="rounded-full"
-        />
+        /> -->
       </div>
     </div>
   </div>

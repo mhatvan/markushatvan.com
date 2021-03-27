@@ -3,7 +3,7 @@
   import { createForm } from 'svelte-forms-lib';
   import * as yup from 'yup';
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  import axios from 'axios';
+  // import axios from 'axios';
   import {
     faTwitter,
     faMedium,
@@ -57,18 +57,18 @@
       comment: yup.string().required('Comment is a required field.'),
     }),
     onSubmit: (values: { name: string; email: string; comment: string }) => {
-      axios
-        .post('/', encode({ 'form-name': 'contact', ...values }), {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        })
-        .then(() => {
-          handleReset();
-          didSubmit = true;
-          setTimeout(() => {
-            didSubmit = false;
-          }, 5000);
-        })
-        .catch((error) => alert(error));
+      // axios
+      //   .post('/', encode({ 'form-name': 'contact', ...values }), {
+      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      //   })
+      //   .then(() => {
+      //     handleReset();
+      //     didSubmit = true;
+      //     setTimeout(() => {
+      //       didSubmit = false;
+      //     }, 5000);
+      //   })
+      //   .catch((error) => alert(error));
     },
   });
 </script>

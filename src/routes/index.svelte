@@ -1,13 +1,9 @@
 <script context="module">
-  export async function load({ fetch }) {
-    try {
-      const blog = await fetch(`blog.json`);
-      const posts = await blog.json();
-      return { posts };
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  // export async function load({ fetch }) {
+  // const blog = await fetch(`blog.json`);
+  // const posts = await blog.json();
+  // return { props: { posts } };
+  // }
 </script>
 
 <script>
@@ -37,7 +33,7 @@
 
 <Introduction />
 
-<RecentPosts posts="{posts}" />
+<!-- <RecentPosts posts="{posts}" /> -->
 
 <ServicesCallToAction />
 

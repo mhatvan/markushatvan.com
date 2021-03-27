@@ -2,7 +2,7 @@
   export let status: string;
   export let error: { message: string; stack: string };
 
-  // import { isDev } from '../stores.js';
+  import { isDev } from '../stores';
 </script>
 
 <svelte:head>
@@ -15,9 +15,10 @@
   <p>{error.message}</p>
 </div>
 
-<!-- {#if $isDev && error.stack}
+{#if $isDev && error.stack}
   <pre>{error.stack}</pre>
-{/if} -->
+{/if}
+
 <style>
   h1,
   p {

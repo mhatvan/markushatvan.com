@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   env: {
     es6: true,
     browser: true,
@@ -27,7 +27,10 @@ module.exports = {
         project: './tsconfig.json',
         tsconfigRootDir: __dirname,
       },
-      extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+      ],
       plugins: ['@typescript-eslint'],
       rules: {
         '@typescript-eslint/ban-ts-comment': 'off',
@@ -43,7 +46,12 @@ module.exports = {
     'comma-dangle': ['error', 'always-multiline'],
     'no-unused-vars': [
       2,
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: true, argsIgnorePattern: 'next' },
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: 'next',
+      },
     ],
     semi: ['error', 'always'],
     eqeqeq: ['warn', 'always'],

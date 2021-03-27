@@ -1,5 +1,6 @@
 const sveltePreprocess = require('svelte-preprocess');
 const node = require('@sveltejs/adapter-node');
+const static = require('@sveltejs/adapter-static');
 const { mdsvex } = require('mdsvex');
 const pkg = require('./package.json');
 const postcss = require('./postcss.config.cjs');
@@ -21,9 +22,6 @@ const preprocess = [
 
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
-  // options passed to svelte.compile (https://svelte.dev/docs#svelte_compile)
-  compilerOptions: null,
-
   // an array of file extensions that should be treated as Svelte components
   extensions: ['.svelte', ...mdsvexConfig.extensions],
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)

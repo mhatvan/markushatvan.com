@@ -45,8 +45,9 @@
     <p class="mb-3">
       Our website uses cookies to analyze how the site is used and to ensure
       your experience is consistent between visits.
-      <a rel="prefetch" href="/privacy-policy" class="mx-2 underline">Privacy
-        Policy</a>
+      <a sveltekit:prefetch href="/privacy-policy" class="mx-2 underline"
+        >Privacy Policy</a
+      >
       <ExternalLink
         href="https://www.cookiesandyou.com/"
         customClass="underline"
@@ -56,10 +57,9 @@
     </p>
 
     <div class="text-center">
-      <button
-        class="mr-3 cookie-notice-btn"
-        on:click="{onConfirm}"
-      >Accept</button>
+      <button class="mr-3 cookie-notice-btn" on:click="{onConfirm}"
+        >Accept</button
+      >
       <button class="cookie-notice-btn" on:click="{onDecline}">Decline</button>
     </div>
   </div>

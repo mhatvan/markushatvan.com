@@ -5,7 +5,7 @@
     faMedium,
     faGithub,
     faLinkedin,
-    faDev,
+    // faDev,
     faReddit,
   } from '@fortawesome/free-brands-svg-icons';
   import { faRss } from '@fortawesome/free-solid-svg-icons';
@@ -30,7 +30,7 @@
       ariaLabel="Follow me on dev.to"
       customClass="inline-flex text-teal-900 hover:text-teal-700"
     >
-      <Icon data="{faDev}" class="m-3" scale="{2}" />
+      <!-- <Icon data="{faDev}" class="m-3" scale="{2}" /> -->
     </ExternalLink>
 
     <ExternalLink

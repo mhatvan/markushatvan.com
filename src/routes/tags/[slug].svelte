@@ -14,7 +14,7 @@
         return regex.test(convertToSentenceCase(page.params.slug));
       });
 
-      return { posts, postsByTag, slug: page.params.slug };
+      return { props: { posts, postsByTag, slug: page.params.slug } };
     } catch (error) {
       console.error(error);
     }
