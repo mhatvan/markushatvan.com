@@ -1,7 +1,6 @@
 <script>
-  import { formatDate } from '../helpers/utils.js';
+  import { formatDate, convertToSlug } from '../utils';
   import type { Post } from '../models/post';
-  import { convertToSlug } from '../helpers/utils';
 
   export let post: Post;
 </script>
@@ -10,6 +9,6 @@
 &middot;
 <span class="text-teal-700">{post.readingTime}</span>
 &middot;
-<a sapper:prefetch href="/categories/{convertToSlug(post.category)}"
+<a sveltekit:prefetch href="/categories/{convertToSlug(post.category)}"
   >{post.category}
 </a>

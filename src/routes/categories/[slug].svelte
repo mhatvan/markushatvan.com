@@ -1,31 +1,31 @@
 <script context="module">
-  import { convertToSentenceCase } from '../../helpers/utils';
+  import { convertToSentenceCase } from '../../utils';
 
-  export async function preload({ params }) {
+  export async function load({ page, fetch }) {
     try {
-      const allPosts = await this.fetch(`blog.json`);
+      const allPosts = await fetch(`blog.json`);
       const posts = await allPosts.json();
 
       const postsByCategory = posts.filter(
-        (post: Post) => post.category === convertToSentenceCase(params.slug),
+        (post: Post) =>
+          post.category === convertToSentenceCase(page.params.slug),
       );
 
-      return { posts, postsByCategory, slug: params.slug };
+      return { posts, postsByCategory, slug: page.params.slug };
     } catch (error) {
       console.error(error);
     }
   }
 </script>
 
-<script>
-  import BlogOverviewHeader from '../../components/BlogOverviewHeader.svelte';
-  import BlogPostSidebar from '../../components/BlogPostSidebar.svelte';
-  import BlogPostFilters from '../../components/BlogPostFilters.svelte';
-  import CurrentGoals from '../../components/CurrentGoals.svelte';
-  import SEO from '../../components/SEO.svelte';
-  import { stores } from '@sapper/app';
+<script lang="ts">
+  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
+  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
+  import BlogPostFilters from '$lib/BlogPostFilters.svelte';
+  import CurrentGoals from '$lib/CurrentGoals.svelte';
+  import SEO from '$lib/SEO.svelte';
+  import { page } from '$app/stores';
   import type { Post } from '../../models/post';
-  const { page } = stores();
 
   export let postsByCategory: Post[];
   export let posts: Post[];
@@ -45,13 +45,13 @@
 <SEO />
 
 <BlogOverviewHeader>
-  <CurrentGoals {readableSlug} />
+  <CurrentGoals readableSlug="{readableSlug}" />
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mh-container">
   <BlogPostFilters posts="{postsByCategory}" filteredByCategory />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar posts="{posts}" />
   </aside>
 </section>

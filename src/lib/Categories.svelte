@@ -1,6 +1,6 @@
 <script>
   import type { Post } from '../models/post.js';
-  import { convertToSlug } from '../helpers/utils';
+  import { convertToSlug } from '../utils';
 
   export let posts: Post[];
 

@@ -1,6 +1,6 @@
 <script>
-  import ExternalLink from '../components/ExternalLink.svelte';
-  import SEO from '../components/SEO.svelte';
+  import ExternalLink from '$lib/ExternalLink.svelte';
+  import SEO from '$lib/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -39,9 +39,9 @@
   <h2>Interested in a collaboration?</h2>
   <p>
     You can send me a message through the
-    <a href="/contact" sapper:prefetch>Contact</a>
+    <a href="/contact" sveltekit:prefetch>Contact</a>
     page. Additionally, my CV is available and can be downloaded on the
-    <a href="/resume" sapper:prefetch>Resume</a>
+    <a href="/resume" sveltekit:prefetch>Resume</a>
     page.
   </p>
 

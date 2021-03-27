@@ -1,9 +1,9 @@
 <script context="module">
-  import { convertToSentenceCase } from '../../helpers/utils';
+  import { convertToSentenceCase } from '../../utils';
 
-  export async function preload({ params }) {
+  export async function load({ page, fetch }) {
     try {
-      const allPosts = await this.fetch(`blog.json`);
+      const allPosts = await fetch(`blog.json`);
       const posts: Post[] = await allPosts.json();
 
       const postsByTag = posts.filter((post: Post) => {
@@ -11,10 +11,10 @@
           return [];
         }
         const regex = new RegExp(post.tags.join('|'), 'i');
-        return regex.test(convertToSentenceCase(params.slug));
+        return regex.test(convertToSentenceCase(page.params.slug));
       });
 
-      return { posts, postsByTag, slug: params.slug };
+      return { posts, postsByTag, slug: page.params.slug };
     } catch (error) {
       console.error(error);
     }
@@ -22,10 +22,10 @@
 </script>
 
 <script>
-  import BlogOverviewHeader from '../../components/BlogOverviewHeader.svelte';
-  import BlogPostSidebar from '../../components/BlogPostSidebar.svelte';
-  import BlogPostFilters from '../../components/BlogPostFilters.svelte';
-  import SEO from '../../components/SEO.svelte';
+  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
+  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
+  import BlogPostFilters from '$lib/BlogPostFilters.svelte';
+  import SEO from '$lib/SEO.svelte';
   import type { Post } from '../../models/post';
 
   export let postsByTag: Post[];
@@ -51,10 +51,9 @@
 </BlogOverviewHeader>
 
 <section class="container flex flex-wrap mh-container">
-
   <BlogPostFilters posts="{postsByTag}" filteredByTag />
 
   <aside class="w-full mt-8 lg:mt-0 lg:w-3/12">
-    <BlogPostSidebar {posts} />
+    <BlogPostSidebar posts="{posts}" />
   </aside>
 </section>

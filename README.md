@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eae4cbc6-27fb-4953-b6d4-e5b9959b8992/deploy-status)](https://app.netlify.com/sites/markushatvan/deploys)
 
-My personal website hosted on Netlify built with SapperJS.
+My personal website hosted on Netlify built with SvelteKit.
 
 The main focus of the website is to provide value to visitors through the [blog](https://markushatvan.com/blog), which will contain articles about various programming topics, personal development and tool recommendations.
 

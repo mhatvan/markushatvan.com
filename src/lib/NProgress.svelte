@@ -1,3 +1,15 @@
+<script>
+  import NProgress from 'nprogress';
+  import { getStores } from '$app/stores';
+
+  NProgress.configure({
+    // Full list: https://github.com/rstacruz/nprogress#configuration
+    showSpinner: false,
+  });
+
+  $: getStores().preloading ? NProgress.start() : NProgress.done();
+</script>
+
 <style>
   /* Make clicks pass-through */
   :global(#nprogress) {
@@ -59,7 +71,9 @@
     position: relative;
   }
 
-  :global(.nprogress-custom-parent #nprogress .spinner, .nprogress-custom-parent #nprogress .bar) {
+  :global(.nprogress-custom-parent #nprogress .spinner, .nprogress-custom-parent
+      #nprogress
+      .bar) {
     position: absolute;
   }
 
@@ -80,17 +94,3 @@
     }
   }
 </style>
-
-<script>
-  import NProgress from 'nprogress';
-  import { stores } from '@sapper/app';
-
-  NProgress.configure({
-    // Full list: https://github.com/rstacruz/nprogress#configuration
-    showSpinner: false,
-  });
-
-  const { preloading } = stores();
-
-  $: $preloading ? NProgress.start() : NProgress.done();
-</script>

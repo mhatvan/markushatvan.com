@@ -1,6 +1,6 @@
 <script>
-  import ExternalLink from '../components/ExternalLink.svelte';
-  import SEO from '../components/SEO.svelte';
+  import ExternalLink from '$lib/ExternalLink.svelte';
+  import SEO from '$lib/SEO.svelte';
 </script>
 
 <svelte:head>
@@ -176,7 +176,7 @@
   <h2>Privacy policy</h2>
   <p>
     Information on data protection can be found on our
-    <a sapper:prefetch href="/privacy-policy">Privacy Policy</a>
+    <a sveltekit:prefetch href="/privacy-policy">Privacy Policy</a>
     page.
   </p>
 </div>

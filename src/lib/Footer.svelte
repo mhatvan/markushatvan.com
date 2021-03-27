@@ -28,7 +28,7 @@
       class="w-full mb-6 sm:mb-0 sm:w-1/3"
     >
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'about' ? 'page' : undefined}"
         href="/about"
         class="footer-link"
@@ -36,7 +36,7 @@
         About
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'blog' ? 'page' : undefined}"
         href="/blog"
         class="footer-link"
@@ -45,7 +45,7 @@
       </a>
       <div class="ml-2">
         <a
-          sapper:prefetch
+          sveltekit:prefetch
           aria-current="{segment === 'programming' ? 'page' : undefined}"
           href="/categories/programming"
           class="italic footer-link"
@@ -53,7 +53,7 @@
           Programming
         </a>
         <a
-          sapper:prefetch
+          sveltekit:prefetch
           aria-current="{segment === 'lifestyle' ? 'page' : undefined}"
           href="/categories/lifestyle"
           class="italic footer-link"
@@ -62,7 +62,7 @@
         </a>
       </div>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'recommendations' ? 'page' : undefined}"
         href="/recommendations"
         class="footer-link"
@@ -75,7 +75,7 @@
       class="w-full mb-6 sm:mb-0 sm:w-1/3"
     >
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'services' ? 'page' : undefined}"
         href="/services"
         class="footer-link"
@@ -83,7 +83,7 @@
         Services
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'contact' ? 'page' : undefined}"
         href="/contact"
         class="footer-link"
@@ -91,7 +91,7 @@
         Contact
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'resume' ? 'page' : undefined}"
         href="/resume"
         class="footer-link"
@@ -99,7 +99,7 @@
         Resume
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'imprint' ? 'page' : undefined}"
         href="/imprint"
         class="footer-link"
@@ -107,7 +107,7 @@
         Imprint
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'privacy-policy' ? 'page' : undefined}"
         href="/privacy-policy"
         class="footer-link"
@@ -115,7 +115,7 @@
         Privacy policy
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'terms-and-conditions' ? 'page' : undefined}"
         href="/terms-and-conditions"
         class="footer-link"

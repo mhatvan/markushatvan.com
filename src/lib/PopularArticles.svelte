@@ -16,7 +16,7 @@
     <div class="py-4 border-b border-gray-600">
       <InfoTags post="{post}" />
       <br />
-      <a sapper:prefetch href="blog/{post.slug}" class="text-gray-800"
+      <a sveltekit:prefetch href="blog/{post.slug}" class="text-gray-800"
         >{post.title}</a
       >
     </div>

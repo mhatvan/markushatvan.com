@@ -1,7 +1,6 @@
-<script>
-  import { stores } from '@sapper/app';
+<script lang="ts">
+  import { page } from '$app/stores';
   import { onMount } from 'svelte';
-  const { page } = stores();
 
   const baseURL = `https://markushatvan.com`;
 
@@ -20,7 +19,7 @@
 
   const fallbackTitle = 'Markus Hatvan - On your side for your site';
   const fallbackDescription =
-    'Personal website and blog written from scratch with SapperJS and TailwindCSS.';
+    'Personal website and blog written from scratch with SvelteKit and TailwindCSS.';
 
   const socialTitle = blogPostInfo.title || fallbackTitle;
   const socialDescription = blogPostInfo.excerpt || fallbackDescription;

@@ -7,9 +7,8 @@
     faFacebook,
     faLinkedin,
   } from '@fortawesome/free-brands-svg-icons';
-  import { stores } from '@sapper/app';
+  import { page } from '$app/stores';
   import type { Post } from '../models/post';
-  const { page } = stores();
 
   export let post: Post;
 

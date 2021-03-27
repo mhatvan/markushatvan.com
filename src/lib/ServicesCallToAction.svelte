@@ -13,7 +13,7 @@
         </p>
         <a
           href="/contact"
-          sapper:prefetch
+          sveltekit:prefetch
           class="mt-4 text-lg rounded btn-primary"
         >
           Get in touch

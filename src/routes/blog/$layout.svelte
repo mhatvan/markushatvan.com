@@ -1,10 +1,10 @@
 <script context="module">
-  export async function preload() {
+  export async function load({ fetch }) {
     try {
-      const blog = await this.fetch(`blog.json`);
+      const blog = await fetch(`blog.json`);
       const posts = await blog.json();
 
-      // const webmentions = await this.fetch(
+      // const webmentions = await fetch(
       //   `https://webmention.io/api/count.json?target=${params.slug}`,
       // );
       // const webmentionCounts = await webmentions.json();
@@ -16,20 +16,20 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   import Image from 'svelte-image';
-  import BlogPostHeader from '../../components/BlogPostHeader.svelte';
-  import BlogPostSidebar from '../../components/BlogPostSidebar.svelte';
-  import ShareButtons from '../../components/ShareButtons.svelte';
-  import PrevNextArticle from '../../components/PrevNextArticle.svelte';
-  import BackToBlogOverviewBtn from '../../components/BackToBlogOverviewBtn.svelte';
-  import BlogOverviewHeader from '../../components/BlogOverviewHeader.svelte';
-  import BlogPostFilters from '../../components/BlogPostFilters.svelte';
-  import SEO from '../../components/SEO.svelte';
+  import BlogPostHeader from '$lib/BlogPostHeader.svelte';
+  import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
+  import ShareButtons from '$lib/ShareButtons.svelte';
+  import PrevNextArticle from '$lib/PrevNextArticle.svelte';
+  import BackToBlogOverviewBtn from '$lib/BackToBlogOverviewBtn.svelte';
+  import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
+  import BlogPostFilters from '$lib/BlogPostFilters.svelte';
+  import SEO from '$lib/SEO.svelte';
   import { afterUpdate } from 'svelte';
-  import { convertToSlug } from '../../helpers/utils.js';
+  import { convertToSlug } from '../../utils';
 
-  // import Webmentions from '../../components/Webmentions.svelte';
+  // import Webmentions from '$lib/Webmentions.svelte';
   // import type { Post } from '../../models/post';
 
   // adding types throws compiler error for some reason
@@ -136,8 +136,8 @@
       <h1>Blog</h1>
       <p>
         Opinions and viewpoints about
-        <a href="/categories/programming" sapper:prefetch>Programming</a>,
-        <a href="/categories/lifestyle" sapper:prefetch>Lifestyle</a>
+        <a href="/categories/programming" sveltekit:prefetch>Programming</a>,
+        <a href="/categories/lifestyle" sveltekit:prefetch>Lifestyle</a>
         and other topics. I am here to share my knowledge in an expressive manner
         and there will be guest authors from time to time.
       </p>

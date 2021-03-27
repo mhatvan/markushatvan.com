@@ -7,9 +7,9 @@
     {
       name: 'markushatvan',
       description:
-        'Personal website and blog written from scratch with SapperJS and TailwindCSS.',
+        'Personal website and blog written from scratch with SvelteKit and TailwindCSS.',
       techStack:
-        'SapperJS, Svelte, TailwindCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
+        'SvelteKit, Svelte, TailwindCSS, NodeJS, Rollup, Markdown, GitHub, Netlify',
       websiteLink: 'https://markushatvan.com',
       githubLink: 'https://github.com/mhatvan/markushatvan.com',
     },

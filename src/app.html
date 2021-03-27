@@ -14,8 +14,6 @@
     />
     <link rel="pingback" href="https://webmention.io/markushatvan.com/xmlrpc" />
 
-    %sapper.base%
-
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
     <link rel="icon" type="image/png" href="mh-favicon.svg" />
     <link rel="stylesheet" href="global.css" />
@@ -33,24 +31,10 @@
       href="/sitemap.xml"
     />
 
-    <!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
-    %sapper.styles%
-
-    <!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
-    %sapper.head%
-
-    <!-- Sapper creates a <script> tag containing `src/client.js`
-      and anything else it needs to hydrate the app and
-      initialise the router -->
-    %sapper.scripts%
+    %svelte.head%
   </head>
 
   <body>
-    <!-- The application will be rendered inside this element,
-      because `src/client.js` references it -->
-    <div id="sapper">%sapper.html%</div>
+    <div id="svelte">%svelte.body%</div>
   </body>
 </html>

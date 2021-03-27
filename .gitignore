@@ -1,8 +1,6 @@
 .DS_Store
 /node_modules/
-/src/node_modules/@sapper/
 yarn-error.log
-/__sapper__/
 static/g
 .vscode/*
 !.vscode/settings.json
@@ -15,6 +13,8 @@ stats.html
 static/global.css
 static/global.css.map
 .env
+.svelte
+build
 
 # Local Netlify folder
 .netlify

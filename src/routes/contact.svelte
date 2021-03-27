@@ -15,8 +15,8 @@
     faExternalLinkAlt,
     faCheckCircle,
   } from '@fortawesome/free-solid-svg-icons';
-  import SEO from '../components/SEO.svelte';
-  import ExternalLink from '../components/ExternalLink.svelte';
+  import SEO from '$lib/SEO.svelte';
+  import ExternalLink from '$lib/ExternalLink.svelte';
 
   let didSubmit = false;
 
@@ -90,7 +90,7 @@
   <p>
     I'm currently available full-time to take on new projects. You can find an
     overview of the services that I offer under the
-    <a href="/services" sapper:prefetch>Services</a>
+    <a href="/services" sveltekit:prefetch>Services</a>
     tab.
   </p>
 
@@ -209,7 +209,7 @@
   <h2>Not convinced yet?</h2>
   <p>
     You can find my up-to-date CV under
-    <a sapper:prefetch href="/resume">Resume</a>
+    <a sveltekit:prefetch href="/resume">Resume</a>
     for all my professional references and experience.
   </p>
   <p>

@@ -1,7 +1,5 @@
 <script>
-  // @ts-nocheck
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import { faBars } from '@fortawesome/free-solid-svg-icons';
   import ClickOutside from 'svelte-click-outside';
 
@@ -20,7 +18,7 @@
   >
     <div class="flex">
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === undefined ? 'page' : undefined}"
         href="."
         class="mt-0 text-xl font-semibold tracking-tight nav-link md:inline-block"
@@ -45,7 +43,7 @@
       class="w-full ml-auto md:flex md:w-auto"
     >
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'about' ? 'page' : undefined}"
         href="/about"
         class="nav-link md:inline-block md:mt-0"
@@ -53,7 +51,7 @@
         About
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'blog' ? 'page' : undefined}"
         href="/blog"
         class="nav-link md:inline-block md:mt-0"
@@ -61,7 +59,7 @@
         Blog
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'recommendations' ? 'page' : undefined}"
         href="/recommendations"
         class="nav-link md:inline-block md:mt-0"
@@ -69,7 +67,7 @@
         Recommendations
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'services' ? 'page' : undefined}"
         href="/services"
         class="nav-link md:inline-block md:mt-0"
@@ -77,7 +75,7 @@
         Services
       </a>
       <a
-        sapper:prefetch
+        sveltekit:prefetch
         aria-current="{segment === 'contact' ? 'page' : undefined}"
         href="/contact"
         class="nav-link md:inline-block md:mt-0"

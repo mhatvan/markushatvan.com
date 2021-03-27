@@ -1,7 +1,7 @@
 <script>
-  import SEO from '../components/SEO.svelte';
-  import ExternalLink from '../components/ExternalLink.svelte';
-  import AffiliateNotice from '../components/AffiliateNotice.svelte';
+  import SEO from '$lib/SEO.svelte';
+  import ExternalLink from '$lib/ExternalLink.svelte';
+  import AffiliateNotice from '$lib/AffiliateNotice.svelte';
 </script>
 
 <svelte:head>
@@ -31,7 +31,7 @@
     I created this website to be visible on the web as a developer and to share
     the knowledge that I gathered over the years. I want to provide value to the
     public and share my thoughts. I wrote an article explaining
-    <a sapper:prefetch href="/blog/6-reasons-why-i-started-this-blog">
+    <a sveltekit:prefetch href="/blog/6-reasons-why-i-started-this-blog">
       my reasons why I started this blog</a
     >.
   </p>

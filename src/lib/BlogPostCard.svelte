@@ -8,7 +8,7 @@
   <!-- <a href="blog/{post.slug}"> <img src="{post.cover}" alt="asdf" /> </a> -->
   <div class="px-6 py-8">
     <div class="my-3 text-xl font-bold">
-      <a sapper:prefetch href="blog/{post.slug}" class="link-inherit"
+      <a sveltekit:prefetch href="blog/{post.slug}" class="link-inherit"
         >{post.title}</a
       >
     </div>
@@ -27,7 +27,7 @@
   </div>
   <div class="absolute bottom-0 right-0 pt-4 pl-6 text-right">
     <a
-      sapper:prefetch
+      sveltekit:prefetch
       aria-label="{post.slug}"
       href="blog/{post.slug}"
       class="inline-block rounded-br btn-primary"

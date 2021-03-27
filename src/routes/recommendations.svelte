@@ -1,7 +1,7 @@
 <script>
-  import SEO from '../components/SEO.svelte';
-  import ExternalLink from '../components/ExternalLink.svelte';
-  import AffiliateNotice from '../components/AffiliateNotice.svelte';
+  import SEO from '$lib/SEO.svelte';
+  import ExternalLink from '$lib/ExternalLink.svelte';
+  import AffiliateNotice from '$lib/AffiliateNotice.svelte';
 </script>
 
 <svelte:head>
@@ -33,39 +33,38 @@
     <b>Rambox:</b>
     I actually used
     <ExternalLink href="https://meetfranz.com/">Franz</ExternalLink>
-    for a couple of years, but it is not regularly and actively maintained
-    anymore, so I switched over to
+    for a couple of years, but it is not regularly and actively maintained anymore,
+    so I switched over to
     <ExternalLink href="https://rambox.pro/">
       Rambox Community Edition
     </ExternalLink>
-    for that reason. I am very happy with it because it does exactly what it is
-    supposed to: having multiple services like Google Calendar, Telegram,
-    Discord, and more within a single application window. It is easy to switch
-    between applications and acting on notifications, so you never miss any
-    messages.
+    for that reason. I am very happy with it because it does exactly what it is supposed
+    to: having multiple services like Google Calendar, Telegram, Discord, and more
+    within a single application window. It is easy to switch between applications
+    and acting on notifications, so you never miss any messages.
   </p>
 
   <p>
     <b>Brave Browser:</b>
     I found out about
     <ExternalLink href="https://brave.com">Brave Browser</ExternalLink>
-    in 2019 when I was looking for a privacy-focused browser alternative to
-    Google Chrome. Brave is built on top of a tracking-stripped version of
-    Chromium and I really love the ad and tracker blocker, which is part of
-    Brave and promises to load sites up to six times faster than other browsers.
-    With BAT (Basic Attention Token) as a built-in cryptocurrency token for
-    rewarding and supporting content creators, automatic HTTPS Everywhere,
-    blocking autoplay, and many other features, I was hooked. When I find the
-    time, I plan on supporting Brave by contributing to its projects on GitHub.
+    in 2019 when I was looking for a privacy-focused browser alternative to Google
+    Chrome. Brave is built on top of a tracking-stripped version of Chromium and
+    I really love the ad and tracker blocker, which is part of Brave and promises
+    to load sites up to six times faster than other browsers. With BAT (Basic Attention
+    Token) as a built-in cryptocurrency token for rewarding and supporting content
+    creators, automatic HTTPS Everywhere, blocking autoplay, and many other features,
+    I was hooked. When I find the time, I plan on supporting Brave by contributing
+    to its projects on GitHub.
   </p>
 
   <p>
     <b>Qwant:</b>
-    If you disagree with the data collection practices by Google, there is a
-    good search engine alternative called
+    If you disagree with the data collection practices by Google, there is a good
+    search engine alternative called
     <ExternalLink href="https://www.qwant.com/">Qwant</ExternalLink>
-    that doesn't track you across the web and neither sells your search data. I
-    prefer Qwant over the most popular privacy-focused search engine
+    that doesn't track you across the web and neither sells your search data. I prefer
+    Qwant over the most popular privacy-focused search engine
     <ExternalLink href="https://duckduckgo.com/">DuckDuckGo</ExternalLink>,
     because Qwant is based in France and therefore has to conform to European
     GDPR data regulations.
@@ -84,10 +83,10 @@
     <ExternalLink href="https://legalweb.io?aff=4254" isAffiliateLink>
       cookie opt-in plugin
     </ExternalLink>
-    for WordPress developed by two developers and an information technology
-    lawyer. It receives regular updates so you can be sure that you will be
-    always conforming to the newest GDPR laws and standards. A rollout of a
-    CMS-independent cookie notice is also planned in the near future.
+    for WordPress developed by two developers and an information technology lawyer.
+    It receives regular updates so you can be sure that you will be always conforming
+    to the newest GDPR laws and standards. A rollout of a CMS-independent cookie
+    notice is also planned in the near future.
   </p>
 
   <p>
@@ -106,38 +105,38 @@
 
   <p>
     <b>Frase:</b>
-    I recently purchased this content optimization tool to help me write better
-    blog posts.
+    I recently purchased this content optimization tool to help me write better blog
+    posts.
     <ExternalLink href="https://www.frase.io/?via=markus" isAffiliateLink>
       Frase.io
     </ExternalLink>
-    can pull in the top Google search results and compare your content writing
-    to it. You will be able to improve your SEO relevance by adding more
-    keywords, knowing the average word count of competitors and being able to
-    answer the specific questions that users ask through different platforms.
+    can pull in the top Google search results and compare your content writing to
+    it. You will be able to improve your SEO relevance by adding more keywords, knowing
+    the average word count of competitors and being able to answer the specific questions
+    that users ask through different platforms.
   </p>
 
   <p>
     <b>Linguix:</b>
-    When you write blog posts, it happens quickly to produce typos or other
-    unwanted grammatical mistakes while typing.
+    When you write blog posts, it happens quickly to produce typos or other unwanted
+    grammatical mistakes while typing.
     <ExternalLink href="https://linguix.com/r/tzfltd" isAffiliateLink>
       Linguix
     </ExternalLink>
-    is an intelligent AI-based grammar checking tool, which detects spelling
-    issues, provides synonyms and gives you advanced document statistics about
-    the readability of your content. Apart from grammar corrections, you can
-    also insert snippets to automate everyday typing tasks and phrases or use
-    premade templates for e.g. emails or essays.
+    is an intelligent AI-based grammar checking tool, which detects spelling issues,
+    provides synonyms and gives you advanced document statistics about the readability
+    of your content. Apart from grammar corrections, you can also insert snippets
+    to automate everyday typing tasks and phrases or use premade templates for e.g.
+    emails or essays.
   </p>
 
   <p>
     <b>AppSumo:</b>
-    I found out about this website not long ago but I love it! AppSumo provides
-    you with big discounts on software & tools that are available on the market.
-    So far, I bought Crello, Frase, and Linguix through the website, and I am
-    happy with the value that all three tools provide me. In case you are tight
-    on cash, they also have a generous collection of
+    I found out about this website not long ago but I love it! AppSumo provides you
+    with big discounts on software & tools that are available on the market. So far,
+    I bought Crello, Frase, and Linguix through the website, and I am happy with
+    the value that all three tools provide me. In case you are tight on cash, they
+    also have a generous collection of
     <ExternalLink href="https://appsumo.com/tools/freebies/">
       Freebies
     </ExternalLink>
@@ -154,12 +153,12 @@
       Wix
     </ExternalLink>
     in my blog post about
-    <a rel="preload" href="/blog/wix-wordpress-jamstack-oh-my">Wix, WordPress,
-      JAMStack - Oh My!</a>
-    and compared it to websites built with a CMS and JAMstack sites. The big
-    upsides of building websites with Wix is that you can drag and drop content
-    to your liking which results in a fast workflow and there are no coding
-    skills required.
+    <a rel="preload" href="/blog/wix-wordpress-jamstack-oh-my"
+      >Wix, WordPress, JAMStack - Oh My!</a
+    >
+    and compared it to websites built with a CMS and JAMstack sites. The big upsides
+    of building websites with Wix is that you can drag and drop content to your liking
+    which results in a fast workflow and there are no coding skills required.
   </p>
 
   <h2>Domain & Hosting</h2>
@@ -173,10 +172,10 @@
     >
       World4You
     </ExternalLink>
-    around 10 years ago because it was the selected domain & hosting provider
-    for a website of a client that I was working on. Since I was happy with the
-    service and also liked the UI and user experience, I also bought this domain
-    (markushatvan.com) and another one for a side-project of mine called
+    around 10 years ago because it was the selected domain & hosting provider for
+    a website of a client that I was working on. Since I was happy with the service
+    and also liked the UI and user experience, I also bought this domain (markushatvan.com)
+    and another one for a side-project of mine called
     <ExternalLink href="https://www.dawcomparison.com/">
       DAW Comparison
     </ExternalLink>
@@ -185,10 +184,10 @@
 
   <p>
     <b>Bluehost:</b>
-    This domain & hosting provider powers over 2 million websites worldwide and
-    is the perfect choice for bloggers. Officially recommended by WordPress,
-    Bluehost comes with a handy 1-click WordPress install, a free domain for the
-    first year, a free SSL certificate and 24/7 customer support. With my
+    This domain & hosting provider powers over 2 million websites worldwide and is
+    the perfect choice for bloggers. Officially recommended by WordPress, Bluehost
+    comes with a handy 1-click WordPress install, a free domain for the first year,
+    a free SSL certificate and 24/7 customer support. With my
     <ExternalLink
       href="https://www.bluehost.com/track/markushatvan/"
       isAffiliateLink
@@ -219,10 +218,9 @@
 
   <p>
     <b>Zooplus:</b>
-    My girlfriend and I are customers at Zooplus since 2017, and we find
-    everything we need for our cat King Noodlez. We always bulk buy pet supplies
-    here and don't ever have to go to the store and carry home 10 kg bags of
-    food anymore.
+    My girlfriend and I are customers at Zooplus since 2017, and we find everything
+    we need for our cat King Noodlez. We always bulk buy pet supplies here and don't
+    ever have to go to the store and carry home 10 kg bags of food anymore.
     <ExternalLink
       href="https://www.zooplus.de/invitations/Markus.Hatvan/1"
       isAffiliateLink
@@ -236,10 +234,9 @@
     <ExternalLink href="https://amzn.to/2YMmI4o" isAffiliateLink>
       Himalayan salt lamp
     </ExternalLink>
-    to see if it can help to combat migraine, sleep problems, and other health
-    issues and it worked! With its air-purifying qualities and cool look, I can
-    highly recommend getting one. It is also a great gift for friends and
-    family.
+    to see if it can help to combat migraine, sleep problems, and other health issues
+    and it worked! With its air-purifying qualities and cool look, I can highly recommend
+    getting one. It is also a great gift for friends and family.
   </p>
 
   <h2>Investing</h2>
@@ -253,19 +250,18 @@
     >
       Binance
     </ExternalLink>
-    in 2018 because it offers a wide array of cryptocurrency alt-coins to buy.
-    In early 2020, I compared cryptocurrency exchanges for fees, popularity,
-    supported coins, and usability to see if I should switch to some other
-    exchange, but Binance still excels in these areas.
+    in 2018 because it offers a wide array of cryptocurrency alt-coins to buy. In
+    early 2020, I compared cryptocurrency exchanges for fees, popularity, supported
+    coins, and usability to see if I should switch to some other exchange, but Binance
+    still excels in these areas.
   </p>
   <p>
     <b>Blockfolio:</b>
-    This mobile app is super handy for tracking the value of cryptocurrencies.
-    You can track a high amount of cryptos, set price alerts and read news about
-    individual coins.
+    This mobile app is super handy for tracking the value of cryptocurrencies. You
+    can track a high amount of cryptos, set price alerts and read news about individual
+    coins.
     <ExternalLink href="https://blockfolio.com/">Blockfolio</ExternalLink>
-    is starting its own trading experience and you can win crypto and prizes
-    with
+    is starting its own trading experience and you can win crypto and prizes with
     <ExternalLink
       href="https://blockfolio.com/trading?r=j8TyxVihE7"
       isAffiliateLink

@@ -1,8 +1,12 @@
 <script>
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  import { faAngular, faJs, faNpm } from '@fortawesome/free-brands-svg-icons';
+  import {
+    faAngular,
+    faJsSquare,
+    faNpm,
+  } from '@fortawesome/free-brands-svg-icons';
   import ExternalLink from './ExternalLink.svelte';
-  import { dateIsBefore } from '../helpers/utils.js';
+  import { dateIsBefore } from '../utils';
 
   const talks = [
     {
@@ -20,7 +24,7 @@
     {
       title: 'How I built a Sapper blog with all the must-have features',
       date: '2020-09-24',
-      logo: faJs,
+      logo: faJsSquare,
       logoColor: 'text-yellow-500',
       videoLink: 'https://www.youtube.com/watch?v=8rm12dGk03g',
       slidesLink:
@@ -43,7 +47,7 @@
     {
       title: 'Best practices for open source contributions',
       date: '',
-      logo: faJs,
+      logo: faJsSquare,
       logoColor: 'text-yellow-500',
       videoLink: '',
       slidesLink:
