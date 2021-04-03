@@ -3,11 +3,13 @@ const node = require('@sveltejs/adapter-node');
 const static = require('@sveltejs/adapter-static');
 const pkg = require('./package.json');
 const postcss = require('./postcss.config.cjs');
-const mdsvexConfig = require('./mdsvex.config.cjs');
-const image = require('svelte-image');
+const { mdsvex } = require(`mdsvex`);
+const { imagetools } = require('vite-imagetools');
+
+const extensions = [`.svelte`, '.md', `.mdx`, '.svx'];
 
 const preprocess = [
-  image({ placeholder: 'blur', optimizeRemote: true }),
+  imagetools({ force: true }),
   sveltePreprocess({
     defaults: {
       script: 'typescript',
@@ -16,11 +18,11 @@ const preprocess = [
     postcss,
     preserve: ['ld+json'],
   }),
+  mdsvex({ extensions: extensions }),
 ];
 
 module.exports = {
-  // an array of file extensions that should be treated as Svelte components
-  extensions: ['.svelte', ...mdsvexConfig.extensions],
+  extensions: extensions,
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
   preprocess: preprocess,
   kit: {

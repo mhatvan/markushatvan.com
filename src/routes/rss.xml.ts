@@ -32,12 +32,10 @@ const renderXmlRssFeed = (
   </channel>
 </rss>`;
 
-export function get(res): void {
-  // console.log(1, props);
-  // res.writeHead(200, {
-  //   'Cache-Control': `max-age=0, s-max-age=${600}`, // 10 minutes
-  //   'Content-Type': 'application/rss+xml',
-  // });
-  // const feed = renderXmlRssFeed(posts);
-  // res.end(feed);
+export function get() {
+  const feed = renderXmlRssFeed(posts);
+
+  return {
+    body: feed,
+  };
 }

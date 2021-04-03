@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import {
     faTwitter,
@@ -11,8 +11,6 @@
   import { faEnvelope, faRss } from '@fortawesome/free-solid-svg-icons';
   import ExternalLink from './ExternalLink.svelte';
   import SpeedlifyFooter from './SpeedlifyFooter.svelte';
-
-  export let segment: string;
 </script>
 
 <footer class="text-teal-200 border-t-4 border-teal-700 applause-gradient">
@@ -27,26 +25,11 @@
       aria-label="Left footer navigation"
       class="w-full mb-6 sm:mb-0 sm:w-1/3"
     >
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'about' ? 'page' : undefined}"
-        href="/about"
-        class="footer-link"
-      >
-        About
-      </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'blog' ? 'page' : undefined}"
-        href="/blog"
-        class="footer-link"
-      >
-        Blog
-      </a>
+      <a sveltekit:prefetch href="/about" class="footer-link"> About </a>
+      <a sveltekit:prefetch href="/blog" class="footer-link"> Blog </a>
       <div class="ml-2">
         <a
           sveltekit:prefetch
-          aria-current="{segment === 'programming' ? 'page' : undefined}"
           href="/categories/programming"
           class="italic footer-link"
         >
@@ -54,19 +37,13 @@
         </a>
         <a
           sveltekit:prefetch
-          aria-current="{segment === 'lifestyle' ? 'page' : undefined}"
           href="/categories/lifestyle"
           class="italic footer-link"
         >
           Lifestyle
         </a>
       </div>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'recommendations' ? 'page' : undefined}"
-        href="/recommendations"
-        class="footer-link"
-      >
+      <a sveltekit:prefetch href="/recommendations" class="footer-link">
         Recommendations
       </a>
     </nav>
@@ -74,52 +51,14 @@
       aria-label="Right footer navigation"
       class="w-full mb-6 sm:mb-0 sm:w-1/3"
     >
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'services' ? 'page' : undefined}"
-        href="/services"
-        class="footer-link"
-      >
-        Services
-      </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'contact' ? 'page' : undefined}"
-        href="/contact"
-        class="footer-link"
-      >
-        Contact
-      </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'resume' ? 'page' : undefined}"
-        href="/resume"
-        class="footer-link"
-      >
-        Resume
-      </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'imprint' ? 'page' : undefined}"
-        href="/imprint"
-        class="footer-link"
-      >
-        Imprint
-      </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'privacy-policy' ? 'page' : undefined}"
-        href="/privacy-policy"
-        class="footer-link"
-      >
+      <a sveltekit:prefetch href="/services" class="footer-link"> Services </a>
+      <a sveltekit:prefetch href="/contact" class="footer-link"> Contact </a>
+      <a sveltekit:prefetch href="/resume" class="footer-link"> Resume </a>
+      <a sveltekit:prefetch href="/imprint" class="footer-link"> Imprint </a>
+      <a sveltekit:prefetch href="/privacy-policy" class="footer-link">
         Privacy policy
       </a>
-      <a
-        sveltekit:prefetch
-        aria-current="{segment === 'terms-and-conditions' ? 'page' : undefined}"
-        href="/terms-and-conditions"
-        class="footer-link"
-      >
+      <a sveltekit:prefetch href="/terms-and-conditions" class="footer-link">
         Terms and conditions
       </a>
     </nav>

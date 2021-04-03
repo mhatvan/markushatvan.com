@@ -11,7 +11,7 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   import Introduction from '$lib/Introduction.svelte';
   import Applause from '$lib/Applause.svelte';
   import InspirationalQuote from '$lib/InspirationalQuote.svelte';

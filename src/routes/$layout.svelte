@@ -1,26 +1,25 @@
 <script context="module">
-  // export async function load({ fetch }) {
-  //   try {
-  //     await fetch('sitemap.xml');
-  //     await fetch('rss.xml');
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
+  export async function load({ fetch }: LoadInput) {
+    try {
+      await fetch('/sitemap.xml');
+      await fetch('/rss.xml');
+    } catch (error) {
+      console.error(error);
+    }
+  }
 </script>
 
-<script>
+<script lang="ts">
   import { afterUpdate } from 'svelte';
   import BreakpointHelper from '$lib/BreakpointHelper.svelte';
   import CookieNotice from '$lib/CookieNotice.svelte';
-  // import NProgress from '$lib/NProgress.svelte';
+  import NProgress from '$lib/NProgress.svelte';
   import Nav from '$lib/Nav.svelte';
   import Footer from '$lib/Footer.svelte';
   import { isDev } from '../stores';
+  import type { LoadInput } from '@sveltejs/kit/types.internal';
 
   import 'prismjs/themes/prism-tomorrow.css';
-
-  export let segment: string;
 
   let fullURL: string = '';
 
@@ -36,23 +35,16 @@
 
 <BreakpointHelper />
 
-<!-- <NProgress /> -->
+<NProgress />
 
-<Nav segment="{segment}" />
+<Nav />
 
 <main class="pb-12 mh">
   <slot />
 </main>
 
-<Footer segment="{segment}" />
+<Footer />
 
 {#if !$isDev}
   <CookieNotice />
 {/if}
-
-<style>
-  main {
-    /* Offset fixed navbar */
-    /* min-height: calc(100vh - 335px); */
-  }
-</style>

@@ -21,7 +21,7 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';

@@ -1,9 +1,7 @@
-<script>
+<script lang="ts">
   // import Icon from 'svelte-awesome/components/Icon.svelte';
   // import { faBars } from '@fortawesome/free-solid-svg-icons';
   // import ClickOutside from 'svelte-click-outside';
-
-  export let segment: string;
 
   let open = false;
 
@@ -19,11 +17,10 @@
     <div class="flex">
       <a
         sveltekit:prefetch
-        aria-current="{segment === undefined ? 'page' : undefined}"
         href="."
         class="mt-0 text-xl font-semibold tracking-tight nav-link md:inline-block"
       >
-        <img class="h-8" src="mh-logo.jpeg" alt="Markus Hatvan" />
+        <img class="h-8" src="/mh-logo.jpeg" alt="Markus Hatvan" />
       </a>
     </div>
     <div class="ml-auto md:hidden">
@@ -44,7 +41,6 @@
     >
       <a
         sveltekit:prefetch
-        aria-current="{segment === 'about' ? 'page' : undefined}"
         href="/about"
         class="nav-link md:inline-block md:mt-0"
       >
@@ -52,7 +48,6 @@
       </a>
       <a
         sveltekit:prefetch
-        aria-current="{segment === 'blog' ? 'page' : undefined}"
         href="/blog"
         class="nav-link md:inline-block md:mt-0"
       >
@@ -60,7 +55,6 @@
       </a>
       <a
         sveltekit:prefetch
-        aria-current="{segment === 'recommendations' ? 'page' : undefined}"
         href="/recommendations"
         class="nav-link md:inline-block md:mt-0"
       >
@@ -68,7 +62,6 @@
       </a>
       <a
         sveltekit:prefetch
-        aria-current="{segment === 'services' ? 'page' : undefined}"
         href="/services"
         class="nav-link md:inline-block md:mt-0"
       >
@@ -76,7 +69,6 @@
       </a>
       <a
         sveltekit:prefetch
-        aria-current="{segment === 'contact' ? 'page' : undefined}"
         href="/contact"
         class="nav-link md:inline-block md:mt-0"
       >
@@ -89,10 +81,6 @@
 <style>
   .header-box-shadow {
     box-shadow: 0 -0.2rem 0.9rem 0.2rem rgba(0, 0, 0, 0.5);
-  }
-
-  [aria-current] {
-    font-weight: bold;
   }
 
   header {

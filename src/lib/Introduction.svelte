@@ -1,5 +1,5 @@
 <script>
-  // import Image from 'svelte-image';
+  import Logo1 from '../../static/markus-hatvan.jpeg?w=250&format=webp&srcset';
 </script>
 
 <section class="applause-gradient">
@@ -28,12 +28,12 @@
         </p>
       </div>
       <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
-        <!-- <Image
-          src="markus-hatvan.jpeg"
+        <img
+          srcset="{Logo1}"
+          type="image/webp"
           alt="Markus Hatvan"
-          placeholderClass="rounded-full"
           class="rounded-full"
-        /> -->
+        />
       </div>
     </div>
   </div>
