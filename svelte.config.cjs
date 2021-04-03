@@ -6,7 +6,7 @@ const postcss = require('./postcss.config.cjs');
 const { mdsvex } = require(`mdsvex`);
 const { imagetools } = require('vite-imagetools');
 
-const extensions = [`.svelte`, '.md', `.mdx`, '.svx'];
+const extensions = [`.svelte`, '.svx'];
 
 const preprocess = [
   imagetools({ force: true }),

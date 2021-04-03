@@ -13,12 +13,8 @@ tags:
   - Blogging
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="pen-writing-on-a-paper.jpeg" alt="Writer's journey"  />
+  <img src="/pen-writing-on-a-paper.jpeg" alt="Writer's journey" loading="lazy" loading="lazy"  />
   <figcaption class="text-center">
     Let's start this journey! - Photo by
     <a href="https://unsplash.com/@alvaroserrano" target="_blank" rel="noopener noreferrer">

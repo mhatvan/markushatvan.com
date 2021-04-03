@@ -13,12 +13,8 @@ tags:
   - Hustle
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="how-to-win-your-first-clients-as-freelance-web-developer.jpg" alt="People in a business meeting shaking hands"  />
+  <img src="/how-to-win-your-first-clients-as-freelance-web-developer.jpg" alt="People in a business meeting shaking hands" loading="lazy"  />
   <figcaption class="text-center">
     This special moment when you finally seal the deal! - Photo by Author
   </figcaption>

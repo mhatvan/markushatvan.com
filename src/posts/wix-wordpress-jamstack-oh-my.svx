@@ -12,12 +12,8 @@ tags:
   - WYSIWYG
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="close-up-of-different-light-bulbs.jpeg" alt="Close up of different light bulbs"  />
+  <img src="/close-up-of-different-light-bulbs.jpeg" alt="Close up of different light bulbs" loading="lazy"  />
   <figcaption class="text-center">
     So many options, so little time. - Photo by
     <a href="https://unsplash.com/@impatrickt" target="_blank" rel="noopener noreferrer">

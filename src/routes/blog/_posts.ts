@@ -9,10 +9,10 @@ import readingTime from 'read-time-estimate';
 loadLanguages(['shell', 'markdown', 'json']);
 
 const posts = fs
-  .readdirSync('./src/routes/blog')
+  .readdirSync('./src/posts')
   .filter((elem) => elem.endsWith('.svx'))
   .map((postFilename) => {
-    const postContent = fs.readFileSync(`./src/routes/blog/${postFilename}`, {
+    const postContent = fs.readFileSync(`./src/posts/${postFilename}`, {
       encoding: 'utf8',
     });
 
@@ -27,9 +27,8 @@ const posts = fs
 
     const html = marked(postFrontMatter.body, { renderer });
 
-    const readingTimeDuration = { readingTime }.readingTime(
-      postFrontMatter.body,
-    ).humanizedDuration;
+    const readingTimeDuration = readingTime(postFrontMatter.body)
+      .humanizedDuration;
     const beautifiedReadingTime = readingTimeDuration.replace('utes', ' read');
 
     return {

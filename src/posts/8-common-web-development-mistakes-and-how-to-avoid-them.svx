@@ -11,12 +11,8 @@ tags:
   - Code quality
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-    <Image src="8-common-web-development-mistakes-and-how-to-avoid-them.jpeg" alt="Clean workspace of a web developer"  />
+    <img src="/8-common-web-development-mistakes-and-how-to-avoid-them.jpeg" alt="Clean workspace of a web developer" loading="lazy" />
   <figcaption class="text-center">
     Admit it, you make some of these mistakes too. - Photo by Author
   </figcaption>

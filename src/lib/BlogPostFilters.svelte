@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import BlogPostCard from './BlogPostCard.svelte';
   import flatten from 'flatten';
   import type { Post } from '../models/post';

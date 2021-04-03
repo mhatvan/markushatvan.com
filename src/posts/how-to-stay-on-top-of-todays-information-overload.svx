@@ -11,12 +11,8 @@ tags:
 hasAffiliateLink: true
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="assorted-book-lot.jpg" alt="Assorted book lot"  />
+  <img src="/assorted-book-lot.jpg" alt="Assorted book lot" loading="lazy"  />
   <figcaption class="text-center">
     How I feel waking up to new emails and notifications in the morning. - Photo by
     <a href="https://unsplash.com/@freestocks" target="_blank" rel="noopener noreferrer">
@@ -54,7 +50,7 @@ When you notice that you have to put a lot of mails in that folder, try to split
 This way you have an easier time keeping your inbox as empty as possible while cleaning out your subfolders periodically whenever you feel it is necessary.
 
 <figure class="my-10">
-  <Image src="email-inbox.png" alt="Email inbox"  />
+  <img src="/email-inbox.png" alt="Email inbox" loading="lazy"  />
   <figcaption class="text-center">Keep your inbox tidy and use multiple subfolders (visible on the left).</figcaption>
 </figure>
 
@@ -79,7 +75,7 @@ There will always be days when you 100% cannot procrastinate on tasks, therefore
 Oftentimes you will be on the go and need to **write down your thoughts somewhere as soon as possible** so you don't forget about it again. I use a "Reminders" calendar for simple entries like "Contact person XYZ" or "Sign up for service XYZ".
 
 <figure class="my-10">
-  <Image src="google-calendar-example-week.png" alt="Google Calendar weekly view"  />
+  <img src="/google-calendar-example-week.png" alt="Google Calendar weekly view" loading="lazy"  />
   <figcaption class="text-center">The differently colored calendar entries make it easy to distinguish them visually.</figcaption>
 </figure>
 
@@ -148,7 +144,7 @@ You can save your favorite content into a collection in Raindrop.io and use it w
 Compared to browser bookmarks, I primarily keep longer reads, which I don't want to rush, in Raindrop.io, so I can focus 100% on the content. These can be blog posts about programming, SEO, and other topics or interviews with inspiring people.
 
 <figure class="my-10">
-  <Image src="raindrop-ui.png" alt="Raindrop.io user interface"  />
+  <img src="/raindrop-ui.png" alt="Raindrop.io user interface" loading="lazy"  />
   <figcaption class="text-center">All the articles that I still need to read are neatly organized in Raindrop.</figcaption>
 </figure>
 
@@ -163,7 +159,7 @@ Information overload often comes in the form of application notifications as wel
 With a workspace browser like [Rambox](https://rambox.pro/), **you have all your frequently used applications in one place** instead of having multiple browser tabs open that you need to keep track of.
 
 <figure class="my-10">
-  <Image src="rambox-ui.png" alt="Rambox user interface"  />
+  <img src="/rambox-ui.png" alt="Rambox user interface" loading="lazy"  />
   <figcaption class="text-center">Rambox provides you with a wide array of services. You can also add custom websites but for me, these 8 services on the left are enough.</figcaption>
 </figure>
 

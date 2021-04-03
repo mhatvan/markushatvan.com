@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let href: string;
   export let title: string | undefined = undefined;
   export let customClass: string = '';

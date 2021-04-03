@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import type { Post } from '../models/post';
 
   export let previousArticle: Post;
@@ -15,7 +15,7 @@
         <b>
           <a
             sveltekit:prefetch
-            href="blog/{previousArticle.slug}"
+            href="/blog/{previousArticle.slug}"
             class="text-xl no-underline hover:underline link-inherit"
             style="font-weight: 700;"
           >
@@ -34,7 +34,7 @@
         <b>
           <a
             sveltekit:prefetch
-            href="blog/{nextArticle.slug}"
+            href="/blog/{nextArticle.slug}"
             class="text-xl no-underline hover:underline link-inherit"
             style="font-weight: 700;"
           >

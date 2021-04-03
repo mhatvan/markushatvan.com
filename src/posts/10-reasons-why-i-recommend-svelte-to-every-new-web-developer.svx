@@ -12,12 +12,8 @@ tags:
   - Beginners
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-    <Image src="svelte-logo-on-brickwall-background.jpg" alt="Svelte logo on brickwall background"  />
+    <img src="/svelte-logo-on-brickwall-background.jpg" alt="Svelte logo on brickwall background" loading="lazy" />
   <figcaption class="text-center">
     Svelte will give you developer superpowers! - Photo by Author
   </figcaption>

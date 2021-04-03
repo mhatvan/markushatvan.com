@@ -12,12 +12,8 @@ tags:
   - Awareness
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="how-to-improve-your-hair-quality-with-the-natural-and-environmentally-friendly-no-poo-method.jpg" alt="Beautiful woman with long blond hair lying on her back facing the camera" />
+  <img src="/how-to-improve-your-hair-quality-with-the-natural-and-environmentally-friendly-no-poo-method.jpg" alt="Beautiful woman with long blond hair lying on her back facing the camera" loading="lazy" />
   <figcaption class="text-center">Photo by Author</figcaption>
 </figure>
 
@@ -38,7 +34,7 @@ We quickly found out that there’s actually a huge movement out there that prom
 Rye flour is a powerful and natural ingredient in your hair care routine. It is pH neutral and you can use it as a cleanser even if your scalp is sensitive. It can help to remove excess oil and dirt from your healthy hair. Before using the rye flour no poo method, I recommend going through the hair with a boar bristle brush about a hundred times to encourage the blood flow to the scalp and get rid of loose hair.
 
 <figure>
-  <Image src="no-poo-step-by-step.jpg" alt="Step by step image collage how to mix rye flour with water" />
+  <img src="/no-poo-step-by-step.jpg" alt="Step by step image collage how to mix rye flour with water" loading="lazy" />
   <figcaption class="text-center">It only takes three simple steps to make your own shampoo. - Photo by Author</figcaption>
 </figure>
 

@@ -12,12 +12,8 @@ tags:
   - Awareness
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-    <Image src="reclaim-your-data-privacy-with-these-privacy-focused-alternatives.jpeg" alt="Man in suit with expensive watch"  />
+    <img src="/reclaim-your-data-privacy-with-these-privacy-focused-alternatives.jpeg" alt="Man in suit with expensive watch" loading="lazy"  />
   <figcaption class="text-center">
     Be careful, it's a trap! - Photo by Author
   </figcaption>

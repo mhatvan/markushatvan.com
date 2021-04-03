@@ -12,12 +12,8 @@ tags:
   - JavaScript frameworks
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="laptop-with-displayed-code.jpeg" alt="Code on laptop"  />
+  <img src="/laptop-with-displayed-code.jpeg" alt="Code on laptop" loading="lazy"  />
   <figcaption class="text-center">
     All you need is code. - Photo by
     <a href="https://unsplash.com/@clemhlrdt" target="_blank" rel="noopener noreferrer">
@@ -114,7 +110,7 @@ I coincidentally ran across [SapperJS](https://sapper.svelte.dev/) and realized 
 After a short moment of triumphing, I saw this notice on their documentation:
 
 <figure class="my-10">
-  <Image src="sapper-notice.png" alt="Sapper early development notice"  />
+  <img src="/sapper-notice.png" alt="Sapper early development notice" loading="lazy"  />
   <figcaption class="text-center">
     This will be a risky choice. - Early development notice on
     <a href="https://sapper.svelte.dev/docs" target="_blank" rel="noopener noreferrer">

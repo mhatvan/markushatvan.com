@@ -13,12 +13,8 @@ tags:
   - Beginners
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="work-desk-with-various-items.png" alt="Work desk with various items" />
+  <img src="/work-desk-with-various-items.png" alt="Work desk with various items" loading="lazy"/>
   <figcaption class="text-center">
     I know you want to. - Photo by Author
   </figcaption>

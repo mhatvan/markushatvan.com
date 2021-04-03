@@ -11,12 +11,8 @@ tags:
   - Short story
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="boat-sailing-into-the-night.jpeg" alt="Black sailing boat"  />
+  <img src="/boat-sailing-into-the-night.jpeg" alt="Black sailing boat" loading="lazy" />
   <figcaption class="text-center">
     Sailing into the dream. - Photo by
     <a href="https://unsplash.com/@jplenio" target="_blank" rel="noopener noreferrer">
@@ -68,7 +64,7 @@ The man responded in a distrusting tone: "I don't believe you. I have never hear
 Deciding for the non-confrontational choice, I stepped to the chessboard and made the first move hoping to win fast to be able to get back on the hunt for the money package.
 
 <figure class="my-10">
-  <Image src="chess-game.jpg" alt="Chess pieces on a chess board" />
+  <img src="/chess-game.jpg" alt="Chess pieces on a chess board" loading="lazy"/>
   <figcaption class="text-center">
     Photo by
     <a href="https://unsplash.com/@hpzworkz" target="_blank" rel="noopener noreferrer">
@@ -88,7 +84,7 @@ After a couple of moves, it already looked grim for me! I started to talk to the
 In the meantime, Ben also found himself on the top floor and had to hide away from personnel. He ended up in a room with an orange cat and similar to my own messed up situation, the cat would threaten to reveal his position by knocking inventory to the ground and meowing loudly if he would not do a good enough job at petting and entertaining her.
 
 <figure class="my-10">
-  <Image src="orange-cat.jpg" alt="Orange cat looking at the viewer" />
+  <img src="/orange-cat.jpg" alt="Orange cat looking at the viewer" loading="lazy"/>
   <figcaption class="text-center">
     Photo by
     <a href="https://unsplash.com/@stefanobg" target="_blank" rel="noopener noreferrer">

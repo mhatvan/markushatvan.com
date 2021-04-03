@@ -11,12 +11,8 @@ tags:
   - Success
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="person-standing-in-front-of-sundown.jpeg" alt="Person standing in front of sundown"  />
+  <img src="/person-standing-in-front-of-sundown.jpeg" alt="Person standing in front of sundown" loading="lazy" />
   <figcaption class="text-center">
     You have it all in you. - Photo by
     <a href="https://unsplash.com/@coopery" target="_blank" rel="noopener noreferrer">

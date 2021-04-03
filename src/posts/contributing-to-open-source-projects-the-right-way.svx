@@ -12,12 +12,8 @@ tags:
   - Beginners
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="contributing-to-open-source-projects-the-right-way.jpeg" alt="Contribution to open source projects the right way banner"  />
+  <img src="/contributing-to-open-source-projects-the-right-way.jpeg" alt="Contribution to open source projects the right way banner" loading="lazy" />
   <figcaption class="text-center">You can skip all the books with this easy to follow guide.- Photo by Author</figcaption>
 </figure>
 
@@ -66,7 +62,7 @@ One of the great things about open source contributions is that you get to choos
 Before starting to work on open source contributions, it is essential to know how the usual workflow will look like.
 
 <figure class="my-10">
-  <Image src="contribution-flow.png" alt="Contribution flow in open source"  />
+  <img src="/contribution-flow.png" alt="Contribution flow in open source" loading="lazy"  />
   <figcaption class="text-center">A high-level overview of the step by step flow that open source contributions follow.</figcaption>
 </figure>
 
@@ -138,7 +134,7 @@ Although you can commit to a repository just fine without your commits being ver
 - others can be sure that no one impersonated your account
 
 <figure class="my-10">
-  <Image src="gpg-verified-commits.png" alt="GPG verified commits on GitHub"  />
+  <img src="/gpg-verified-commits.png" alt="GPG verified commits on GitHub" loading="lazy"  />
   <figcaption class="text-center">Most of the commits in the <a href="https://github.com/facebook/react/commits/master" target="_blank" rel="noopener noreferrer">React repository</a> are verified by GPG key.
   </figcaption>
 </figure>
@@ -215,7 +211,7 @@ As programmers, we prefer to avoid unnecessary work and stick to the DRY princip
 A useful hint: whenever you put the issue number into your commit message like `(#<issue-number>)`, the respective issue on the remote repository will receive a timeline notification that looks like this:
 
 <figure class="my-10">
-  <Image src="referenced-commit-id-in-commit.png" alt="Referenced commit ID in commit"  />
+  <img src="/referenced-commit-id-in-commit.png" alt="Referenced commit ID in commit" loading="lazy"  />
   <figcaption class="text-center">Everyone interested in the issue will see that you started working on it.
   </figcaption>
 </figure>
@@ -252,7 +248,7 @@ Forking is just a fancy word for taking a repository on GitHub and copying it un
 It can be done by clicking the Fork button on the right upper corner on any repository as can be seen here:
 
 <figure class="my-10">
-  <Image src="how-to-fork.png" alt="How to fork explanation"  />
+  <img src="/how-to-fork.png" alt="How to fork explanation" loading="lazy"  />
   <figcaption class="text-center">The fork button is in the upper right corner in the GitHub UI.
   </figcaption>
 </figure>
@@ -287,7 +283,7 @@ git remote set-url origin git@github.com:<username>/react.git
 If you did everything correctly, the output of `git remote -v` should display `origin` and `upstream` set up:
 
 <figure class="my-10">
-  <Image src="setup-git-remote.png" alt="Git remote set up"  />
+  <img src="/setup-git-remote.png" alt="Git remote set up" loading="lazy"  />
   <figcaption class="text-center">Output of <code>git remote -v</code>.
   </figcaption>
 </figure>
@@ -311,7 +307,7 @@ Super, we are almost through!
 If you did everything correctly, you will be presented with an alert box at the location of your forked repository, notifying you of your recent push.
 
 <figure class="my-10">
-  <Image src="github-compare-and-pull-request.png" alt="GitHub compare and pull request"  />
+  <img src="/github-compare-and-pull-request.png" alt="GitHub compare and pull request" loading="lazy"  />
   <figcaption class="text-center">A real-life example of a pull request that I made for
 <a href="https://github.com/brainhubeu/react-carousel" target="_blank" rel="noopener noreferrer">React Carousel</a>.</figcaption>
 </figure>
@@ -348,7 +344,7 @@ Depending on the project, this can happen quickly or take a while. Sometimes you
 You successfully created your first pull request!
 
 <figure class="my-10">
-  <Image src="children-success.jpg" alt="Children happy in front of computer"  />
+  <img src="/children-success.jpg" alt="Children happy in front of computer" loading="lazy"  />
   <figcaption class="text-center">Wow, you did it! I hope you are as enthusiastic as these kids ;) - Photo by
     <a href="https://pxhere.com/en/photo/764632" target="_blank" rel="noopener noreferrer">Pxhere</a> (CC0)
   </figcaption>

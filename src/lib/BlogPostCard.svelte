@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import InfoTags from './InfoTags.svelte';
   import type { Post } from 'src/models/post';
 
@@ -9,7 +9,7 @@
   <!-- <a href="blog/{post.slug}"> <img src="{post.cover}" alt="asdf" /> </a> -->
   <div class="px-6 py-8">
     <div class="my-3 text-xl font-bold">
-      <a sveltekit:prefetch href="blog/{post.slug}" class="link-inherit"
+      <a sveltekit:prefetch href="/blog/{post.slug}" class="link-inherit"
         >{post.title}</a
       >
     </div>
@@ -30,7 +30,7 @@
     <a
       sveltekit:prefetch
       aria-label="{post.slug}"
-      href="blog/{post.slug}"
+      href="/blog/{post.slug}"
       class="inline-block rounded-br btn-primary"
     >
       Read the article

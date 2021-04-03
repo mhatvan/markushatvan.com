@@ -11,12 +11,8 @@ tags:
   - Community
 ---
 
-<script>
-  import Image from 'svelte-image';
-</script>
-
 <figure class="mb-10">
-  <Image src="variety-of-different-beer-styles.jpeg" alt="Variety of different beer styles"  />
+  <img src="/variety-of-different-beer-styles.jpeg" alt="Variety of different beer styles" loading="lazy"  />
   <figcaption class="text-center">
     You gotta try them all. - Photo by
     <a href="https://unsplash.com/@juniperphoton" target="_blank" rel="noopener noreferrer">
