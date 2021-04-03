@@ -1,5 +1,6 @@
 <script>
-  // import Image from 'svelte-image';
+  import CodeReview from '../../static/code-review.png';
+  import IntoTheNight from '../../static/into-the-night.png';
   import Icon from 'svelte-awesome/components/Icon.svelte';
   import { faCheck } from '@fortawesome/free-solid-svg-icons';
   import { faClock } from '@fortawesome/free-regular-svg-icons';
@@ -73,10 +74,14 @@
     </div>
   {/each}
 </div>
-<!-- <div class="w-full md:w-2/4">
+<div class="w-full md:w-2/4">
   {#if isProgrammingCategory}
-    <Image src="code-review.png" alt="Man with code editor" />
+    <img srcset="{CodeReview}" type="image/webp" alt="Man with code editor" />
   {:else}
-    <Image src="into-the-night.png" alt="Man sitting next to campfire" />
+    <img
+      srcset="{IntoTheNight}"
+      type="image/webp"
+      alt="Man sitting next to campfire"
+    />
   {/if}
-</div> -->
+</div>

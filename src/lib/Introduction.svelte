@@ -1,5 +1,5 @@
 <script>
-  import Logo1 from '../../static/markus-hatvan.jpeg?w=250&format=webp&srcset';
+  import Image from '../../static/markus-hatvan.jpeg';
 </script>
 
 <section class="applause-gradient">
@@ -29,7 +29,7 @@
       </div>
       <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
         <img
-          srcset="{Logo1}"
+          srcset="{Image}"
           type="image/webp"
           alt="Markus Hatvan"
           class="rounded-full"

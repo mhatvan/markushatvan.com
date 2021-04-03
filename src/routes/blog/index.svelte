@@ -17,8 +17,7 @@
 </script>
 
 <script lang="ts">
-  // import Image from 'svelte-image';
-  import { page } from '$app/stores';
+  import BlogPost from '../../../static/blog-post.png';
   import BlogOverviewHeader from '$lib/BlogOverviewHeader.svelte';
   import BlogPostFilters from '$lib/BlogPostFilters.svelte';
   import BlogPostSidebar from '$lib/BlogPostSidebar.svelte';
@@ -63,7 +62,7 @@
     </p>
   </div>
   <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
-    <!-- <Image src="blog-post.png" alt="Blog post card" /> -->
+    <img srcset="{BlogPost}" type="image/webp" alt="Blog post card" />
   </div>
 </BlogOverviewHeader>
 

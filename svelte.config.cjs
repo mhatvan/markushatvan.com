@@ -5,11 +5,11 @@ const pkg = require('./package.json');
 const postcss = require('./postcss.config.cjs');
 const { mdsvex } = require(`mdsvex`);
 const { imagetools } = require('vite-imagetools');
+const path = require('path');
 
 const extensions = [`.svelte`, '.svx'];
 
 const preprocess = [
-  imagetools({ force: true }),
   sveltePreprocess({
     defaults: {
       script: 'typescript',
@@ -29,9 +29,15 @@ module.exports = {
     adapter: node(),
     target: '#svelte',
     vite: {
+      resolve: {
+        alias: {
+          $static: path.resolve('src/static'),
+        },
+      },
       ssr: {
         noExternal: Object.keys(pkg.dependencies || {}),
       },
+      plugins: [imagetools({ force: true })],
     },
   },
 };
