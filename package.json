@@ -15,7 +15,7 @@
     "lint:fix": "yarn lint --fix",
     "test": "jest",
     "test:watch": "yarn test --watch",
-    "build": "run-s build:css build:prod build:start",
+    "build": "run-s build:css build:prod",
     "build:css": "NODE_ENV=production postcss src/global.pcss -o static/global.css",
     "build:prod": "svelte-kit build",
     "build:start": "svelte-kit start"
