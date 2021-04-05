@@ -27,7 +27,7 @@
           >!
         </p>
       </div>
-      <div class="w-full mx-auto max-width sm:w-1/2 md:w-1/3">
+      <div class="w-full mx-auto max-w-[250px] sm:w-1/2 md:w-1/3">
         <img
           srcset="{Image}"
           type="image/webp"
@@ -38,9 +38,3 @@
     </div>
   </div>
 </section>
-
-<style>
-  .max-width {
-    max-width: 250px;
-  }
-</style>

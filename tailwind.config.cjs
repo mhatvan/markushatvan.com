@@ -1,11 +1,7 @@
 module.exports = {
   important: true,
   purge: {
-    enabled: process.env.NODE_ENV === 'production',
     content: ['./src/**/*.svelte'],
-    options: {
-      safelist: ['my-10'],
-    },
   },
   theme: {
     listStyleType: {
@@ -85,17 +81,5 @@ module.exports = {
       // '2xl': '1536px',
     },
   },
-  variants: {
-    extend: {
-      opacity: ['disabled'],
-      cursor: ['disabled'],
-    },
-  },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-  },
 };

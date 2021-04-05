@@ -1,7 +1,7 @@
 <script lang="ts">
-  // import Icon from 'svelte-awesome/components/Icon.svelte';
-  // import { faBars } from '@fortawesome/free-solid-svg-icons';
-  // import ClickOutside from 'svelte-click-outside';
+  import Icon from 'svelte-awesome/components/Icon.svelte';
+  import { faBars } from '@fortawesome/free-solid-svg-icons';
+  import ClickOutside from 'svelte-click-outside';
 
   let open = false;
 
@@ -24,7 +24,7 @@
       </a>
     </div>
     <div class="ml-auto md:hidden">
-      <!-- <ClickOutside on:clickoutside="{() => (open = false)}">
+      <ClickOutside on:clickoutside="{() => (open = false)}">
         <button
           class="flex items-center px-3 py-2 text-teal-700 border border-gray-400 hover:text-teal-800 hover:border-gray-500"
           aria-label="Hamburger menu"
@@ -32,7 +32,7 @@
         >
           <Icon data="{faBars}" />
         </button>
-      </ClickOutside> -->
+      </ClickOutside>
     </div>
     <nav
       aria-label="Header navigation"

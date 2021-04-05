@@ -6,4 +6,3 @@
 declare module 'flatten';
 declare module 'svelte-click-outside';
 declare module 'svelte-forms-lib';
-declare module 'read-time-estimate';

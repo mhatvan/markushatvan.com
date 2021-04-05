@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { fade } from 'svelte/transition';
   import { createForm } from 'svelte-forms-lib';
   import * as yup from 'yup';
   import Icon from 'svelte-awesome/components/Icon.svelte';
-  // import axios from 'axios';
+  import axios from 'redaxios';
   import {
     faTwitter,
     faMedium,
@@ -36,6 +36,7 @@
     handleChange,
     handleSubmit,
     handleReset,
+    values,
   } = createForm({
     initialValues: {
       name: '',
@@ -57,18 +58,18 @@
       comment: yup.string().required('Comment is a required field.'),
     }),
     onSubmit: (values: { name: string; email: string; comment: string }) => {
-      // axios
-      //   .post('/', encode({ 'form-name': 'contact', ...values }), {
-      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      //   })
-      //   .then(() => {
-      //     handleReset();
-      //     didSubmit = true;
-      //     setTimeout(() => {
-      //       didSubmit = false;
-      //     }, 5000);
-      //   })
-      //   .catch((error) => alert(error));
+      axios
+        .post('/', encode({ 'form-name': 'contact', ...values }), {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        })
+        .then(() => {
+          handleReset();
+          didSubmit = true;
+          setTimeout(() => {
+            didSubmit = false;
+          }, 5000);
+        })
+        .catch((error) => console.error(error));
     },
   });
 </script>
@@ -122,7 +123,7 @@
     class="mt-3 mb-8"
     netlify-honeypot="bot-field"
     data-netlify="true"
-    on:submit|preventDefault="{handleSubmit}"
+    on:submit="{handleSubmit}"
   >
     <div class="flex flex-wrap p-3 bg-gray-200 border border-gray-500 rounded">
       <input type="hidden" name="form-name" value="contact" />
