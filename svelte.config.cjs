@@ -19,6 +19,7 @@ const preprocess = [
   mdsvex({ extensions: extensions }),
 ];
 
+/** @type {import('@sveltejs/kit').Config} */
 module.exports = {
   extensions: extensions,
   // options passed to svelte.preprocess (https://svelte.dev/docs#svelte_preprocess)
