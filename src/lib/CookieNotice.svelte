@@ -1,10 +1,8 @@
 <script>
   import { onMount } from 'svelte';
+  import cookies from 'js-cookie';
   import ExternalLink from './ExternalLink.svelte';
   import Splitbee from './Splitbee.svelte';
-
-  const gaProperty = 'UA-81701707-3';
-  const disableStr = `ga-disable-${gaProperty}`;
 
   // We don't want the cookie notice to flash on every page reload, therefore hidden by default
   export let showCookieNotice = false;
@@ -15,14 +13,13 @@
     const hasDNTEnabled =
       navigator.doNotTrack === '1' || window.doNotTrack === '1';
     // Hide cookie notice if the opt-out cookie exists or user has DNT enabled
-    if (document.cookie.includes(`${disableStr}=true`) || hasDNTEnabled) {
-      window[disableStr] = true;
+    if (cookies.get('didOptOut') === 'true' || hasDNTEnabled) {
       didOptOut = true;
     } else {
-      // Cookie notice is shown when no opt-out or _gid cookie from GA (user didn't accept or decline yet
-      // If _gid cookie is there, we know that user consented to ga collection in the past
-      consentGiven = document.cookie.includes('_gid');
-      showCookieNotice = !document.cookie.includes('_gid');
+      // Cookie notice is shown when no sb_uid cookie from Splitbee (user didn't accept or decline yet
+      // If sb_uid cookie is there, we know that user consented to Splitbee collection in the past
+      consentGiven = !!cookies.get('sb_uid');
+      showCookieNotice = !cookies.get('sb_uid');
     }
   });
 
@@ -32,8 +29,7 @@
   };
 
   const onDecline = () => {
-    document.cookie = `${disableStr}=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/;secure;samesite=none`;
-    window[disableStr] = true;
+    cookies.set('didOptOut', 'true', { expires: 365, secure: true });
     showCookieNotice = false;
   };
 </script>

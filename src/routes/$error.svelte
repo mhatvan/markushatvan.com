@@ -1,8 +1,16 @@
-<script lang="ts">
-  export let status: string;
-  export let error: { message: string; stack: string };
+<script context="module">
+  export function load({ error, status }) {
+    return {
+      props: { error, status },
+    };
+  }
+</script>
 
+<script lang="ts">
   import { isDev } from '../stores';
+
+  export let error;
+  export let status;
 </script>
 
 <svelte:head>

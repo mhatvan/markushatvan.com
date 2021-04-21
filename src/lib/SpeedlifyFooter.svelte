@@ -1,6 +1,6 @@
 <p>Lighthouse Score</p>
 <div class="mt-3 speedlify-score-wrapper">
-  <span class="speedlify-score" title="Performance">97</span>
+  <span class="speedlify-score" title="Performance">100</span>
   <span class="speedlify-score" title="Accessibility">100</span>
   <span class="speedlify-score" title="Best practices">100</span>
   <span class="speedlify-score" title="SEO">100</span>
