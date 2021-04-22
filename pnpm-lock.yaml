@@ -20,7 +20,7 @@ specifiers:
   '@rollup/plugin-replace': ^2.4.2
   '@rollup/plugin-typescript': ^8.2.1
   '@sveltejs/adapter-static': 1.0.0-next.4
-  '@sveltejs/kit': 1.0.0-next.84
+  '@sveltejs/kit': 1.0.0-next.85
   '@tailwindcss/forms': ^0.3.2
   '@tailwindcss/jit': ^0.1.18
   '@tailwindcss/typography': ^0.4.0
@@ -102,7 +102,7 @@ devDependencies:
   '@rollup/plugin-replace': 2.4.2_rollup@2.45.2
   '@rollup/plugin-typescript': 8.2.1_d21869dc49fccc93d6599238c3a50ee6
   '@sveltejs/adapter-static': 1.0.0-next.4
-  '@sveltejs/kit': 1.0.0-next.84_5a1e6f1b68430d6010b8aaf3f0fc8ed0
+  '@sveltejs/kit': 1.0.0-next.85_5a1e6f1b68430d6010b8aaf3f0fc8ed0
   '@tailwindcss/forms': 0.3.2_tailwindcss@2.1.1
   '@tailwindcss/jit': 0.1.18_postcss@8.2.10+tailwindcss@2.1.1
   '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.1
@@ -1828,8 +1828,8 @@ packages:
     resolution: {integrity: sha512-Atri/5jyiVmAklqDKb/5czmLkHos6LQOag61k/C6qWozMb8UopvL3bTm62hFQXGKvGnuSRq2xIueDOKWHM/7rA==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.84_5a1e6f1b68430d6010b8aaf3f0fc8ed0:
-    resolution: {integrity: sha512-v3XsG2Gvl4Fo7j5Uqmeq7NxpdzL6ODi9fV7eQhVNF2/J1Dko2ptG786jC3ynuCR7vrp67Mv+1MgraqGwIBETAQ==}
+  /@sveltejs/kit/1.0.0-next.85_5a1e6f1b68430d6010b8aaf3f0fc8ed0:
+    resolution: {integrity: sha512-hurjQxSObSDqX9RgKFBPRuDfCnGlEy8hg24g6SezV1grUV+qJ5JTNPxwQw75nOS11z67ZaHWwglw64OvqSBLgA==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:

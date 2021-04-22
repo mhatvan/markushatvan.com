@@ -1,6 +1,4 @@
 <script context="module">
-  export const prerender = true;
-
   export async function load({ page, fetch }) {
     const res = await fetch(`/blog.json`);
     return {

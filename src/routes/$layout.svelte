@@ -3,6 +3,8 @@
     try {
       await fetch('/sitemap.xml');
       await fetch('/rss.xml');
+
+      return true;
     } catch (error) {
       console.error(error);
     }

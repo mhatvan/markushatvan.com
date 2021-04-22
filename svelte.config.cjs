@@ -28,9 +28,6 @@ module.exports = {
     adapter: static(),
     target: '#svelte',
     vite: {
-      ssr: {
-        noExternal: Object.keys(pkg.dependencies || {}),
-      },
       plugins: [imagetools({ force: true })],
     },
   },
