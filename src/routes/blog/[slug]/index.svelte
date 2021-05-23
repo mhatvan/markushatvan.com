@@ -1,9 +1,11 @@
 <script context="module">
-  export async function load({ fetch }) {
+  export async function load({ fetch, page }) {
     const res = await fetch(`/blog.json`);
+    const posts = await res.json();
+    const post = posts.find((post) => post.slug === page.params.slug);
     return {
       props: {
-        posts: await res.json(),
+        post: post,
       },
     };
   }
@@ -16,12 +18,13 @@
   import PrevNextArticle from '$lib/PrevNextArticle.svelte';
   import ShareButtons from '$lib/ShareButtons.svelte';
   import type { Post } from 'src/models/post';
-  import { page } from '$app/stores';
+//   import { page } from '$app/stores';
   import SEO from '$lib/SEO.svelte';
 
-  export let posts: Post[];
-
-  $: post = posts.find((post) => post.slug === $page.params.slug);
+//   export let posts: Post[];
+   export let post;
+  
+//   $: post = posts.find((post) => post.slug === $page.params.slug);
   $: postIndex = posts.findIndex((p) => p.slug === $page.params.slug);
   $: previousArticle = posts[postIndex + 1];
   $: nextArticle = posts[postIndex - 1];
