@@ -74,9 +74,11 @@
     position: relative;
   }
 
-  :global(.nprogress-custom-parent #nprogress .spinner, .nprogress-custom-parent
-      #nprogress
-      .bar) {
+  :global(.nprogress-custom-parent #nprogress .spinner) {
+    position: absolute;
+  }
+
+  :global(.nprogress-custom-parent #nprogress .bar) {
     position: absolute;
   }
 

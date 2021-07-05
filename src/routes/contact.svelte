@@ -71,7 +71,6 @@
         .catch((error) => console.error(error));
     },
   });
-
 </script>
 
 <svelte:head>
@@ -313,9 +312,8 @@
   </div>
 </section>
 
-<style>
+<style lang="postcss">
   small {
     @apply text-red-600;
   }
-
 </style>
