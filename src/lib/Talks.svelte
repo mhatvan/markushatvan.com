@@ -1,14 +1,14 @@
-<script>
-  import Icon from 'svelte-awesome';
+<script lang="ts">
   import {
     faAngular,
     faJsSquare,
     faNpm,
   } from '@fortawesome/free-brands-svg-icons';
-  import ExternalLink from './ExternalLink.svelte';
+  import type { ITalk } from 'src/models/talk';
   import { dateIsBefore } from '../utils';
+  import Talk from './Talk.svelte';
 
-  const talks = [
+  const talks: ITalk[] = [
     {
       title: 'Why I Recommend Svelte to Every New Web Developer',
       date: '2021-03-25',
@@ -58,7 +58,7 @@
     },
     {
       title: 'Best practices for open source contributions',
-      date: '',
+      date: '2021-07-20',
       logo: faJsSquare,
       logoColor: 'text-yellow-500',
       videoLink: '',
@@ -69,7 +69,6 @@
       location: 'Vienna, Austria',
     },
   ];
-
 </script>
 
 <section class="container mh-container">
@@ -79,31 +78,7 @@
 
   {#each talks as talk}
     {#if !dateIsBefore(talk.date)}
-      <div
-        class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300"
-      >
-        <div class="inline-flex items-center w-full lg:w-2/4">
-          <Icon data="{talk.logo}" scale="{2}" class="mr-3 {talk.logoColor}" />
-          <span>
-            <b>{talk.title}</b>
-            {#if talk.videoLink}
-              &middot;
-              <ExternalLink href="{talk.videoLink}">Video</ExternalLink>
-            {/if}
-            {#if talk.slidesLink}
-              &middot;
-              <ExternalLink href="{talk.slidesLink}">Slides</ExternalLink>
-            {/if}
-          </span>
-        </div>
-        <div class="w-full my-3 lg:my-0 lg:w-2/4">
-          <ExternalLink href="{talk.organizerLink}">
-            {talk.organizer}
-          </ExternalLink>
-          &middot;
-          {talk.location}
-        </div>
-      </div>
+      <Talk talk="{talk}" />
     {/if}
   {/each}
 
@@ -111,31 +86,7 @@
 
   {#each talks as talk}
     {#if dateIsBefore(talk.date)}
-      <div
-        class="flex flex-wrap items-center justify-between pb-3 my-6 border-b border-gray-300"
-      >
-        <div class="inline-flex items-center w-full lg:w-2/4">
-          <Icon data="{talk.logo}" scale="{2}" class="mr-3 {talk.logoColor}" />
-          <span>
-            <b>{talk.title}</b>
-            {#if talk.videoLink}
-              &middot;
-              <ExternalLink href="{talk.videoLink}">Video</ExternalLink>
-            {/if}
-            {#if talk.slidesLink}
-              &middot;
-              <ExternalLink href="{talk.slidesLink}">Slides</ExternalLink>
-            {/if}
-          </span>
-        </div>
-        <div class="w-full my-3 lg:my-0 lg:w-2/4">
-          <ExternalLink href="{talk.organizerLink}">
-            {talk.organizer}
-          </ExternalLink>
-          &middot;
-          {talk.location}
-        </div>
-      </div>
+      <Talk talk="{talk}" />
     {/if}
   {/each}
 </section>

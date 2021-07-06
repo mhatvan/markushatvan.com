@@ -30,6 +30,7 @@ const posts = fs
     const readingTimeDuration = readingTime(postFrontMatter.body).text;
 
     return {
+      // @ts-expect-error Spread types may only be created from object types.
       ...postFrontMatter.attributes,
       html: marked(html),
       readingTime: readingTimeDuration,

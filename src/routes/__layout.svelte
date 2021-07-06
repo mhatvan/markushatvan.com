@@ -9,7 +9,6 @@
       console.error(error);
     }
   }
-
 </script>
 
 <script lang="ts">
@@ -30,7 +29,6 @@
     let tmpURL = window.location.href;
     fullURL = tmpURL[tmpURL.length - 1] === '/' ? tmpURL : tmpURL + '/';
   });
-
 </script>
 
 <svelte:head>
@@ -49,7 +47,7 @@
 
 <Footer />
 
-{#if $isDev && !$isDev}
+{#if !$isDev}
   <CookieNotice />
 {/if}
 
@@ -57,5 +55,4 @@
   main {
     min-height: calc(100vh - 428px);
   }
-
 </style>

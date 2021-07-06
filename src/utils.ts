@@ -1,11 +1,14 @@
-import { format, isBefore, parseISO } from 'date-fns';
+import dayjs from 'dayjs';
 
-export const formatDate = (isoString: string, dateFormat = 'MMMM do, yyyy'): string => {
-  return format(parseISO(isoString), dateFormat);
+export const formatDate = (
+  isoString: string,
+  dateFormat = 'MMMM D, YYYY',
+): string => {
+  return dayjs(isoString).format(dateFormat);
 };
 
 export const dateIsBefore = (dateA: string, dateB = new Date()): boolean => {
-  return isBefore(new Date(dateA), dateB);
+  return dayjs(dateA).isBefore(dayjs(dateB));
 };
 
 export const convertToSlug = (text: string): string => {
@@ -16,5 +19,8 @@ export const convertToSlug = (text: string): string => {
 };
 
 export const convertToSentenceCase = (text: string): string => {
-  return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase().replace(/-/g, ' ');
+  return (
+    text.charAt(0).toUpperCase() +
+    text.substr(1).toLowerCase().replace(/-/g, ' ')
+  );
 };

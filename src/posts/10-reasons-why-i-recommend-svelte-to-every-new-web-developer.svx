@@ -21,9 +21,8 @@ tags:
 
 <div class="mb-3 alert-gray"
      role="alert">
-  The code blocks are currently not highlighted with Svelte, so syntax highlighting and formatting might not be 100% correct.
+  Syntax highlighting and formatting for code blocks might not be 100% correct due to experimental Svelte support.
 </div>
-
 Although the initial release of [Svelte](https://svelte.dev/) was back in November 2016, it's still more of an underdog amongst the JavaScript front end frameworks and just recently started to get its well deserved attention by the community.
 
 After working with various JavaScript frameworks over the years including Angular, React and Vue.js, I think I have a good overall impression about how writing code can be enjoyable and how it can be frustrating.
@@ -52,6 +51,14 @@ Without further ado, these are the top ten reasons why I recommend Svelte to eve
 If you have never seen the Svelte syntax before, this is how a simple example would look like:
 
 ```svelte
+<script>
+  let role = 'developer';
+</script>
+
+<h1>Hello, {role}!</h1>
+
+<p>I hope you are having a good day!</p>
+
 <style>
   h1 {
     color: green;
@@ -61,14 +68,6 @@ If you have never seen the Svelte syntax before, this is how a simple example wo
     font-style: italic;
   }
 </style>
-
-<script>
-  let role = 'developer';
-</script>
-
-<h1>Hello, {role}!</h1>
-
-<p>I hope you are having a good day!</p>
 ```
 
 Compared to other frontend frameworks which introduce a lot of abstract concepts that take a while to learn and understand, it's really refreshing to see that Svelte just uses plain old HTML, CSS and JavaScript side by side. You can see and easily recognize what is happening here with its beginner-friendly syntax.
@@ -184,14 +183,14 @@ We can also use a shorthand for assigning classes:
   let round = true;
 </script>
 
+<button class:round>C</button>
+
 <style>
   .round {
     border: 1px solid black;
     border-radius: 50%;
   }
 </style>
-
-<button class:round>C</button>
 ```
 
 Above you can see the `class:round` attribute getting applied to the button based on if `round` is true or false. This could easily become a reusable component where you pass the value of `round` from the outside to decide the styling of the component conditionally.

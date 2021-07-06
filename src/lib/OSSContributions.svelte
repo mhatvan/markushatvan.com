@@ -30,6 +30,13 @@
       stargazers_count: '3.2k',
     },
     {
+      name: 'Ferdi',
+      description:
+        '🧔🏽 Ferdi helps you organize how you use your favourite apps by combining them into one application',
+      full_name: 'getferdi/ferdi',
+      stargazers_count: '3k',
+    },
+    {
       name: 'WebTemplateStudio',
       description:
         'Microsoft Web Template Studio quickly builds web applications using a wizard-based UI to turn your needs into a foundation of best patterns and practices',
@@ -43,7 +50,6 @@
       stargazers_count: '1.9k',
     },
   ];
-
 </script>
 
 <section class="container mh-container">
