@@ -111,7 +111,7 @@ I am sure you have seen code similar to this before:
 ```js
 const x = 'Gabriel';
 
-const stuff = x.map((y) => `Hello, ${y}!`);
+const stuff = x.map((y) => 'Hello ' + y);
 ```
 
 What values are stored here? Is Gabriel the first name or last name of a person? What is `x` that gets mapped over? Is it even an array? What does the variable `stuff` hold?
@@ -124,15 +124,12 @@ Let's take a look at a good example:
 
 ```js
 // The variable name `firstName` clearly shows the intent of the stored value
+
 const firstName = 'Gabriel';
 
-/**
- * The variable `students` is in plural, so it is probably an array.
- * The value `student` is most likely an object that we are
- * mapping over.
- * We seem to collect `greetings` of `students` here as a result.
- */
-const greetings = students.map((student) => `Hello, ${student.firstName}!`);
+// The variable `students` is in plural, so it is probably an array. The value `student` is most likely an object that we are mapping over. We seem to collect `greetings` of `students` here as a result.
+
+const greetings = students.map((student) => 'Hello ' + student.firstName + '!');
 ```
 
 Here we can assume a lot more based on good variable naming and clarity which means lesser cognitive overhead for the developer.
