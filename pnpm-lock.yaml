@@ -6,7 +6,7 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': ^5.15.3
   '@fortawesome/free-regular-svg-icons': ^5.15.3
   '@fortawesome/free-solid-svg-icons': ^5.15.3
-  '@sveltejs/adapter-netlify': 1.0.0-next.18
+  '@sveltejs/adapter-static': 1.0.0-next.13
   '@sveltejs/kit': 1.0.0-next.120
   '@tailwindcss/forms': ^0.3.3
   '@tailwindcss/typography': ^0.4.1
@@ -62,7 +62,7 @@ devDependencies:
   '@fortawesome/free-brands-svg-icons': 5.15.3
   '@fortawesome/free-regular-svg-icons': 5.15.3
   '@fortawesome/free-solid-svg-icons': 5.15.3
-  '@sveltejs/adapter-netlify': 1.0.0-next.18
+  '@sveltejs/adapter-static': 1.0.0-next.13
   '@sveltejs/kit': 1.0.0-next.120_svelte@3.38.2
   '@tailwindcss/forms': 0.3.3_tailwindcss@2.2.4
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.4
@@ -561,10 +561,6 @@ packages:
     resolution: {integrity: sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==}
     dev: true
 
-  /@iarna/toml/2.2.5:
-    resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
-    dev: true
-
   /@istanbuljs/load-nyc-config/1.1.0:
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
     engines: {node: '>=8'}
@@ -826,11 +822,8 @@ packages:
       '@sinonjs/commons': 1.8.3
     dev: true
 
-  /@sveltejs/adapter-netlify/1.0.0-next.18:
-    resolution: {integrity: sha512-/rNjYcJ9YRxC5U2WUE2IPDu+rrHVSbpE64IzPM9eNE6wwRYpmn6rQQElzSaMlpQZC2UW37agxIVomnA5bJYHPw==}
-    dependencies:
-      '@iarna/toml': 2.2.5
-      esbuild: 0.12.14
+  /@sveltejs/adapter-static/1.0.0-next.13:
+    resolution: {integrity: sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==}
     dev: true
 
   /@sveltejs/kit/1.0.0-next.120_svelte@3.38.2:

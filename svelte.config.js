@@ -1,5 +1,5 @@
 import sveltePreprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
 import { imagetools } from 'vite-imagetools';
 
