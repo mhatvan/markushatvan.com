@@ -15,6 +15,7 @@ static/global.css.map
 .env
 .svelte-kit
 build
+functions
 
 # Local Netlify folder
 .netlify
